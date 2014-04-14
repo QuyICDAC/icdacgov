@@ -1,0 +1,53 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+
+//-------------------------
+// Header
+// -------------------------
+
+// Logo Image
+// ----------
+.logo-image {
+  a.bg-image {
+    &:hover, &:focus, &:active {
+      background-image: url("../../../images/themes/lime/logo-hover.png");
+    }
+  }
+}
+
+
+//-------------------------
+// Main Nav
+//------------------------
+.t3-mainnav {
+  border-bottom-color: @T3primaryColor;
+}
+
+.t3-mainnav .nav li.dropdown.active > .dropdown-toggle, 
+.t3-mainnav .nav li.dropdown.open.active > .dropdown-toggle {
+  background: @T3primaryColor;
+}
+
+
+// News Feature
+.ja-zinfp-featured-wrap .ja-zinfp-featured-border {
+  &:hover h2.ja-zintitle,
+  &:hover .ja-zincontent-img {
+    background: @T3primaryColor !important;
+    img {
+      border-color: lighten(@T3primaryColor, 10%) !important;
+    }
+  }
+}
+
+.ja-zinfp-wrap .ja-zinfp-normal .ja-zincontent:hover, 
+.ja-zinfp-wrap .ja-zinfp-normal .ja-zincontent:hover a {
+  background: @T3primaryColor !important;
+}
+
+// Tabs
+.teline_iv .container .ja-tabs-title-top ul.ja-tabs-title li.active {
+  border-top-color: @T3primaryColor !important;
+}

@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'ArialNarrowBold';
+    src: url('arialnarrowbold.eot');
+    src: url('arialnarrowbold.eot') format('embedded-opentype'),
+         url('arialnarrowbold.woff') format('woff'),
+         url('arialnarrowbold.ttf') format('truetype'),
+         url('arialnarrowbold.svg#ArialNarrowBold') format('svg');
+}

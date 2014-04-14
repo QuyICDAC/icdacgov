@@ -1,0 +1,519 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+
+// VARIABLES & MIXINS
+// ------------------
+@import "vars.less"; // Include Variables and Mixins
+
+
+// EXTEND STYLE IN BASE
+// --------------------
+@import "../../../plugins/system/t3/base/less/megamenu.less";
+
+
+// BASIC STYLE FOR MEGAMENU
+// -------------------------
+.t3-megamenu {
+
+  // THE MEGAMENU
+  //--------------------------------------------
+
+  // Global Menu Inner padding
+  // -------------------------
+  .mega-inner {
+
+    // Advertisement Title
+    .advs-title {
+    position: relative;
+    text-align: center;
+    line-height: 30px;
+    height: 30px;
+
+    &:after {
+      background: @grayLighter;
+      height: 1px;
+      width: 100%;
+      content: "";
+      top: 14px;
+      left: 0;
+      position: absolute;
+    }
+  }
+
+  .advs-title span {
+    padding: 0 @T3globalPadding/4; 
+    background: @white;
+    position: relative;
+    z-index: 10;
+    left: 0;
+    text-align: center;
+    font-size: 9px;
+    text-transform: uppercase;
+    color: @gray;
+  }
+  
+  // End Adv Title
+
+    .mega-nav.level2 .mega-group-title {
+      border-bottom: 0 !important;
+      background: @black !important;
+      color: @white !important;
+      line-height: 1;
+      font-size: @T3bigFontSize !important;
+      margin-top: 0 !important;
+      padding: 5px 10px !important;
+    }
+
+
+    .mega-feature-news {
+      background: #FFFAE5;
+      border: 1px solid @T3borderColor;
+      padding: (@T3globalPadding/4);
+
+      .mega-feature-news-ct {
+        border: 1px dashed @T3borderColor;
+        padding: (@T3globalPadding/4);
+
+        a {
+          font-family: @serifFontFamily;
+        }
+
+        img {
+          width: 100%;
+          margin-bottom: (@T3globalMargin/2);
+        }
+      }
+    }
+  }
+
+  // Inner Padding for 1 column
+  .span12 .mega-inner {
+  }
+
+
+  // Menu Grids
+  // ----------
+  .row-fluid {
+  }
+
+  .row-fluid + .row-fluid  {
+    border-top: 1px solid @T3borderColor;
+  }
+
+  .row-fluid [class*="span"] {
+  }
+
+
+  // The Dropdown
+  // ------------
+  .mega-dropdown-menu {
+  }
+
+
+  // The Group
+  // ---------
+  .mega-group {
+  }
+
+  // Group Title
+  .mega-nav .mega-group > .mega-group-title,
+  .dropdown-menu .mega-nav .mega-group > .mega-group-title,
+  .dropdown-menu .active .mega-nav .mega-group > .mega-group-title {
+    background: none;
+    border-top: none;
+    border-bottom: 5px solid @T3borderColor;
+    color: @grayDarker;
+    display: block;
+    font-family: "Arial Narrow",Arial,sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: @T3globalMargin/2;
+    margin-bottom: @T3globalMargin/2;
+    padding-bottom: @T3globalPadding/4;
+    padding-left: 6px;
+    text-transform: uppercase;
+    .reset-filter();
+    
+
+    &:hover, &:active, &:focus {
+      background: none ;
+      color: @grayDarker;
+    }
+  }
+
+  // Group Content
+  .mega-group-ct {
+
+  }
+
+  .mega-group-ct > .row-fluid > [class*="span"] > .mega-inner {
+  }
+
+
+  // Nav in Megamenu
+  // ---------------
+  .mega-col-nav {
+    border-left: 1px solid @T3borderColor;
+
+    &:first-child,
+    .mega-col-nav,
+    .mega-col-nav .mega-col-nav {
+      border-left: 0;
+    }
+  }
+
+  // Inner padding
+  .mega-group-ct .mega-col-nav {
+    > .mega-inner {
+      padding: 0;
+    }
+
+    > .mega-dropdown-inner .mega-inner {
+      padding: @T3globalPadding/2;
+    }
+  }
+
+  // Inner padding for nav in 1 column
+  .span12.mega-col-nav .mega-inner {
+  }
+
+  // The Nav
+  .mega-nav,
+  .dropdown-menu .mega-nav {
+  }
+
+  .mega-nav > li,
+  .dropdown-menu .mega-nav > li {
+    padding: 0;
+    &:hover {
+      background: none;
+      color: @T3primaryColor;
+    }
+  }
+
+  .mega-nav > li a,
+  .dropdown-menu .mega-nav > li a {
+    background: none;
+    font-weight: bold;
+    padding: (@T3globalPadding/4) (@T3globalPadding/2);
+    .reset-filter();
+
+    &:hover {
+      background: none;
+      color: @T3primaryColor;
+    }
+  }
+
+  .dropdown-menu .mega-nav > li a  {
+    border-top: none;
+    border-bottom: dotted 1px @T3borderColor;
+  }
+
+  .dropdown-menu .mega-nav > li.active a{
+    color: @grayDarker;
+  }
+
+  .dropdown-menu .mega-nav > li.active {
+    ul > li > a {
+      color: @linkColor;
+      &:hover, &:focus, &:active {
+        color: @grayDarker;
+      }
+    }
+
+    ul > li.active > a{
+      color: @grayDarker;
+    }
+  }
+  // Nav in Group
+  .mega-group > .mega-nav > li,
+  .dropdown-menu .mega-group > .mega-nav > li {
+    padding: 0;
+  }
+
+  .mega-group .mega-nav > li a,
+  .dropdown-menu .mega-group .mega-nav > li a {
+    font-weight: bold;
+  }
+
+  // The caret
+  .mega-nav .dropdown-submenu > a::after {
+    margin-right: 0;
+  }
+
+
+  // Modules in Megamenu
+  // -------------------
+  .mega-col-module {
+    border-left: 1px solid @T3borderColor;
+
+    .ja-bulletin-wrap,
+    .ja-bulletin-wrap.span6 {
+      width: 100%;
+    }
+
+    .ja-bulletin_mega > li{
+      display: block;
+      margin-bottom: @T3globalMargin/4;
+      line-height: 1.4 !important;
+      border-bottom: 1px solid @T3borderColor;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      .post-date {
+        font-size: @T3smallFontSize;
+        color: @gray;
+        font-family: @sansFontFamily;
+      }
+
+      a.mostread-image {
+        display: inline-block;
+        max-width: 50px;
+        
+        img {
+          border: solid 2px #ddd;
+        }
+      }
+
+      .box-left {
+        float: left;
+        margin-right: 10px;
+      }
+
+      .box-right {
+
+        a {
+          font-weight: normal;
+        }
+      }
+    }
+
+  }
+
+  // Inner padding
+  .mega-col-module .mega-inner {
+
+    .module-title {
+      border-bottom: 5px solid @T3borderColor;
+      color: @grayDarker;
+      display: block;
+      font-family: "Arial Narrow",Arial,sans-serif;
+      font-size: 15px;
+      font-weight: bold;
+      font-family: @headingsFontFamily;
+      margin-bottom: @T3globalMargin/2;
+      margin-top: @T3globalMargin/2;
+      padding-top: 0;
+      padding-bottom: @T3globalPadding/4;
+      text-transform: uppercase;
+    }
+
+    .module-ct ul > li {
+      list-style: none;
+      line-height: @baseLineHeight;
+      padding: (@T3globalPadding/4) 0;
+      font-family: @serifFontFamily;
+
+      a {
+        color: @T3primaryColor;
+        font-size: @baseFontSize;
+
+        &:hover {
+          color: @grayDarker;
+        }
+      }
+    }
+  }
+
+  // Module Title
+  .t3-module .module-title {
+    font-size: @T3biggerFontSize;
+    color: @grayDarker;
+    display: block;
+    line-height: @baseLineHeight;
+    margin-bottom: 5px;
+    margin-top: @T3globalMargin/2;
+  }
+
+  // Module Content
+  .t3-module .module-ct {
+    padding: 0 5px;
+    h1,h2,h3,h4,h5,h6 {
+      text-transform: none;
+    }
+
+    p, span {
+      font-weight: normal;
+    }
+
+    ul { margin-left: 0;}
+  }
+
+  // List in Module
+  // Reset List Style in Module
+  .t3-module ul,
+  .t3-module .nav {
+    margin: 0 0 0 15px;
+  }
+
+  .t3-module ul li,
+  .t3-module .nav li {
+    list-style: disc;
+    display: list-item;
+    float: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .t3-module ul li a,
+  .t3-module .nav li a {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-size: 100%;
+    background: none;
+    font: inherit;
+    white-space: normal;
+    // Link states
+    &:hover, &:focus, &:active {
+      background: none;
+      color: inherit;
+      font: inherit;
+    }
+  }
+  
+
+  // The caption
+  // -----------
+  .mega-caption {
+    color: @grayLight;
+    font-size: @T3smallerFontSize;
+    margin-top: 3px;
+    font-weight: normal;
+  }
+
+  // End
+}
+
+
+
+//  MEGAMENU (Inverted)
+// -------------------------------------------------------
+
+.T3Navbar() when (@T3NavbarInverted = 1) {
+
+  // The Group
+  // ---------
+  // Group Title
+  .mega-nav .mega-group > span,
+  .dropdown-menu .mega-nav .mega-group > span {
+    color: @white;
+    // Link states
+    &:hover, &:active, &:focus {
+      color: @white;
+    }
+  }
+
+  // Modules in Megamenu
+  // -------------------
+  // Module Title
+  .t3-module .module-title {
+    color: @white;
+  }
+
+  // End Mixin
+}
+
+.T3Navbar() when (@T3NavbarInverted = 0) {
+  // Leave blank here because we will use the default style.
+}
+
+// Calling the styles
+.t3-megamenu {
+  .T3Navbar();
+  .clearfix();
+}
+
+.navbar .nav > li > .dropdown-menu {
+  &:before,
+  &:after {
+    border: 0;
+  }
+}
+
+// Dropdown Inner
+// --------------
+.mega-dropdown-inner {
+  text-transform: none;
+
+  .mega-inner .mega-nav li a {
+    color: @T3primaryColor;
+  }
+
+  .mega-inner .mega-nav li a:hover,
+  .mega-inner .mega-nav li a:active,
+  .mega-inner .mega-nav li a:focus,
+  .mega-inner .mega-nav li.current.active a {
+    background: none;
+    color: @grayDarker;
+  }
+
+}
+
+.dropdown-menu.mega-dropdown-menu {
+  border-color: @black;
+  .border-radius(0);
+}
+
+.dropdown-submenu.mega.open a {
+  background: none;
+  color: @grayDarker;
+
+  &:after {
+    border-left-color: @grayDark;
+  }
+}
+
+
+.mega-inner {
+  .ja-bulletin-wrap {
+    border: 0;
+  }
+
+}
+
+// Dropdown Open
+// -------------
+
+.dropdown.open a.dropdown-toggle{
+  position: relative;
+}
+
+.dropdown.open a.dropdown-toggle:after {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid @black;
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 46%;
+  z-index: 10000;
+}
+
+//---------------------
+// IE8
+//---------------------
+.lt-ie9 {
+  .t3-mainnav .nav > li > a {
+    font-size: 14px;
+    &.menu-home {
+      font-size: 0;
+    }
+  }
+}

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" method="upgrade" client="site">
+	<name>ja_teline_iv_t3</name>
+	<version>1.0.1</version>
+	<creationDate>20 December 2013</creationDate>
+	<author>JoomlArt.com</author>
+	<authorEmail>webmaster@joomlart.com</authorEmail>
+	<authorUrl>http://www.joomlart.com</authorUrl>
+	<copyright>J.O.O.M. Solutions Ltd.</copyright>
+	<license>GNU/GPL version 2</license>
+	<t3>
+		<base>base</base>
+	</t3>
+	<description>
+		<![CDATA[
+			<div class="overview-header">
+			<h2>
+			  <small style="display: block;">Responsive news & magazine Joomla template for Joomla 2.5. and Joomla 3 - <strong>JA Teline IV</strong>.</small>
+			</h2>
+			<p><strong>JA Teline IV</strong> is the latest of the Teline Series of Joomla! News site templates.</p>
+			<p>Teline templates are very popular with our users, however teline templates at times can require careful devlopment to get the desired results.</p>
+			<p>New users are advised to install quickstart on localhost for reference and to follow userguide for settings. Best results are achieved by using 
+			the demo default settings and then tweaking them to suit the user requirement.</p>
+			<p><i><strong>Note:</strong> JA Teline IV is support RTL language.</i></p>
+		  </div>
+				]]>
+	</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>offline.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>thememagic.xml</filename>
+		<filename>templateInfo.php</filename>
+		<filename>templateHelper.php</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>etc</folder>
+		<folder>fonts</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>less</folder>
+		<folder>html</folder>
+		<folder>language</folder>
+		<folder>images</folder>
+		<folder>tpls</folder>
+	</files>
+	
+	<languages folder="language">
+       <language tag="en-GB">en-GB/en-GB.tpl_ja_teline_iv_t3.ini</language>
+       <language tag="en-GB">en-GB/en-GB.tpl_ja_teline_iv_t3.sys.ini</language>
+   </languages>
+
+	<positions>
+		<position>backtotop</position>
+		<position>footer</position>
+		<position>footer-1</position>
+		<position>footer-2</position>
+		<position>footlogo</position>
+		<position>footnav</position>
+		<position>head-advertisement</position>
+		<position>head-search</position>
+		<position>headline</position>
+		<position>home-feature-1</position>
+		<position>home-feature-2</position>
+		<position>home-feature-3</position>
+		<position>home1-1</position>
+		<position>home1-2</position>
+		<position>home1-3</position>
+		<position>home1-4</position>
+		<position>home1-5</position>
+		<position>ja-news-1</position>
+		<position>ja-news-2</position>
+		<position>ja-news-3</position>
+		<position>ja-news-mobile</position>
+		<position>ja-tabs1</position>
+		<position>ja-tabs2</position>
+		<position>languageswitcherload</position>
+		<position>mainnav</position>
+		<position>mast-col</position>
+		<position>mast-col-1</position>
+		<position>mast-col-2</position>
+		<position>mega-adv1</position>
+		<position>mega1</position>
+		<position>mega6</position>
+		<position>navhelper</position>
+		<position>secnav-1</position>
+		<position>secnav-2</position>
+		<position>secnav-3</position>
+		<position>secnav-4</position>
+		<position>sidebar-1</position>
+		<position>sidebar-2</position>
+	</positions>
+
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/t3/includes/depend">
+
+			<!-- Sample for add or disable template parameters -->
+			<!--fieldset name="menu_params" label="T3_PARAMS_MEGAMENU">
+				<field name="group_disable" type="t3depend" function="@group">
+					<option for="menu_as_bg" value="no">menu_as_bg</option>
+				</field>
+			</fieldset-->
+
+		</fields>
+	</config>
+
+	<updateservers>
+		<server type="collection">http://update.joomlart.com/service/tracking/list.xml</server>
+	</updateservers>	
+
+</extension>

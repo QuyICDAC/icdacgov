@@ -1,0 +1,123 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+
+//
+// MOBILE
+// -------------------------------------------------------------
+@media (max-width: @navbarCollapseWidth) {
+
+  //------------------------------------------------------------
+  // GENERIC ARTICLE STYLES
+  // -----------------------------------------------------------
+
+  // Blog
+  .items-row {
+    .item.column-1 article {
+      border: none; 
+      padding-right: 0;
+    }
+    .item.column-2 article {
+      padding-left: 0;
+    }
+  }
+
+  // Article Images
+  // --------------
+  article img[align=left], .img_caption.left,
+  article img[align=right], .img_caption.right,
+  .img-fulltext-left, .img-fulltext-right {
+    float: none !important;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100% !important;
+  }
+
+  // Newsfeeds 
+  .weblink-category > h2, 
+  .newsfeed-category > h2 {
+    font-size: 18px;
+  }
+
+  .newsfeed-category {
+    .btn-toolbar {
+      input[type="text"] {
+        width: 120px;
+      }
+      select {
+        width: 90px;
+      }
+    }
+  }
+
+  // Title
+  //------
+  .page-header > h1,
+  .page-header > h2,
+  .page-title,
+  .componentheading {
+    font-size: 18px;
+  }
+
+  // weblink
+  .weblink-category,
+  .newsfeed-category {
+    > h2 {
+      font-size: 18px;
+    }
+  }
+
+  .finder > h1 {
+    font-size: 18px;
+  }
+
+  .items-leading .article-title, 
+  .items-leading .article-title > a {
+    font-size: 18px;
+  }
+
+  .ja-telineiv-blog {
+    .article-header {
+      > .article-title > a {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .item-page {
+    .article-title, .article-title > a {
+      font-size: 18px;
+    }
+  }
+
+}
+
+// Max width 480px
+// -------------------------------------------------------------
+@media (max-width: 480px) { 
+  // Search 
+  #finder-search .word input.inputbox {
+    width: 95%;
+    margin-bottom: @T3globalMargin/2;
+  }
+
+  #searchForm .btn-toolbar {
+    input.input {
+      width: 90%;
+      margin-right: 5px;
+    }
+  }
+
+  #searchForm .btn-toolbar .btn-group + .btn-group {
+    margin-left: 0px;
+  }
+}
+
+// Max width 320px
+// -------------------------------------------------------------
+@media (max-width: 320px) {
+  #searchForm .btn-toolbar .btn-group + .btn-group {
+    margin-left: 0px;
+  }
+}

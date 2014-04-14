@@ -1,0 +1,69 @@
+
+
+.ja-bulletin {
+  background: #fff;
+  margin: 0;
+}
+.ja-bulletin li {
+  display: block;
+  margin: 15px 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+}
+.ja-bulletin li:last-child {
+  border: 0;
+  padding-bottom: 0;
+}
+.ja-bulletin li .box-left {
+  float: left;
+  margin: 3px 10px 0 0;
+}
+.ja-bulletin li .box-right {
+  overflow: hidden;
+  line-height: 14px;
+}
+.ja-bulletin li .box-right span {
+  font-size: 10px;
+  color: #999;
+  display: line-block;
+}
+.ja-bulletin li .box-right .post-date {
+  display: block;
+}
+.ja-bulletin li .box-right .post-date > span {
+  margin-right: 5px;
+}
+.ja-bulletin li .box-right .hits {
+  margin-right: 5px;
+}
+.ja-bulletin li .box-right a.mostread {
+  line-height: 16px;
+  display: inline-block;
+}
+.ja-bulletin li .box-right a.readon {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 11px;
+}
+.ja-bulletin.ja-bulletin_world li .box-left {
+  background: url("../images/stripe-bg-2.png") repeat;
+  padding: 4px;
+  border: 1px solid #ccc;
+}
+.ja-bulletin.ja-bulletin_world li .box-left img {
+  padding: 2px;
+  background: #fff;
+}
+.ja-bulletin.ja-bulletin_world li .box-right a.mostread {
+  font-weight: bold;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.ja-bulletin.ja-bulletin_world li .box-right span {
+  font-size: 11px;
+}
+.ja-tabswrap .ja-tab-content .ja-bulletin li {
+  padding: 6px 0;
+}
+

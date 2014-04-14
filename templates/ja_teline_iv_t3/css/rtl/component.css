@@ -1,0 +1,58 @@
+
+
+.com_content body,
+.com_mailto body {
+  padding-top: 0;
+}
+.t3-content {
+  border: none;
+  padding: 20px 0;
+}
+.com_k2 a.toolbar:hover,
+.com_k2 a.toolbar:active,
+.com_k2 a.toolbar:focus {
+  text-decoration: none;
+}
+.com_k2 .t3-content {
+  border: 0;
+  padding: 0;
+}
+.com_k2 .t3-content #k2FrontendContainer #k2FrontendEditToolbar h2.icon-48-k2 {
+  background: url("../../images/system/K2_Logo_105x40_24.png") no-repeat 100% 50%;
+  display: inline-block;
+}
+.com_k2 .t3-content #k2FrontendContainer table.adminFormK2Container td.adminK2RightCol label {
+  display: inline-block;
+  margin: 0 0 0 10px;
+  padding-top: 0;
+}
+.com_k2 .t3-content #k2FrontendContainer table.adminFormK2Container td.adminK2RightCol label input {
+  margin: 3px -18px 0 0;
+}
+.com_k2 .t3-content #k2FrontendContainer table.adminFormK2Container td.adminK2RightCol input {
+  margin: 0;
+}
+.com_k2 .t3-content #k2FrontendContainer table.adminFormK2Container h3.ui-accordion-header {
+  line-height: normal;
+}
+.com_k2 .t3-content #k2FrontendContainer table.adminFormK2Container .modal {
+  background: none;
+  border: none;
+  right: 0;
+  margin: 0;
+  position: inherit;
+  left: auto;
+  top: 0;
+  width: auto;
+  z-index: 10;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.com_k2 .t3-content #k2FrontendContainer table.adminFormK2Container img.calendar {
+  vertical-align: middle;
+}
+

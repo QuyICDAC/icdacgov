@@ -1,0 +1,443 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+
+// -------------------------------------------------------
+//  JA MAIN MENU
+// -------------------------------------------------------
+.t3-mainnav {
+  border-bottom: 5px solid @black;
+  border-top: 1px solid @T3borderColor;
+
+  .nav li.dropdown.open, 
+  .nav li.dropdown.active, 
+  .nav li.dropdown.open.active {
+    > .dropdown-toggle {
+      background-color: @black;
+    }
+  }
+
+  .navbar-inner {
+    min-height: @navbarHeight;
+    padding:  0;
+    background: transparent;
+    border-width: 0 1px 0 1px;
+    border-color: @T3borderColor;
+    border-style: solid;
+    .border-radius(0);  
+    .box-shadow(none);
+    .reset-filter();
+    .btn-navbar { 
+      background: @grayDarker;
+      float: left; 
+      margin: 7px @T3globalMargin/2 0;
+      padding: @T3globalPadding/4 @T3globalPadding/2;
+      .reset-filter();
+    }
+  }
+
+
+
+  // NAVBAR
+  // -------------------------------------------------------
+  .navbar .nav {
+    margin: 0;
+  }
+
+
+  // Links
+  // -----
+  .navbar .nav > li > a {
+    border-top: 0;
+    text-shadow: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: @black;
+    font-size: @T3biggerFontSize;
+  }
+
+  // Hover
+  .navbar .nav > li > a:focus,
+  .navbar .nav > li > a:hover {
+    background: @black;
+    text-shadow: none;
+    outline: none;
+    color: @white;
+  }
+
+  // Active nav items
+  .navbar .nav > .active > a,
+  .navbar .nav > .active > a:hover,
+  .navbar .nav > .active > a:focus {
+    color: @white;
+    text-shadow: none;
+    outline: none;
+    background: @black;
+  }
+
+  // Toggle Button
+  // -------------
+  .navbar .btn-navbar {
+    float: left;
+    padding: 5px 10px;
+    margin: 4px @T3globalMargin 4px;
+    .buttonBackground(darken(@navbarBackgroundHighlight, 5%), darken(@navbarBackground, 5%));
+    .box-shadow(~"inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075)");
+    
+    // The icon
+    [class^="icon-"],
+    [class^=" icon-"] {
+      color: @navbarText;
+      text-shadow: none;
+    }
+  }
+
+
+  // DROPDOWN
+  // -------------------------------------------------------
+
+  // Dropdown arrow/caret
+  // --------------------
+  .caret {
+    display: none;
+  }
+
+  // Place the caret
+  .dropdown .caret {
+    margin-left: 5px;
+  }
+
+
+  // The dropdown menu
+  // -----------------
+  .dropdown-menu {
+    .box-shadow(0 5px 10px rgba(0,0,0,.2));
+
+    // Links within the dropdown menu
+    li > a {
+      border-top: 1px solid @hrBorder;
+      padding: 5px 20px;
+      text-shadow: none;
+    }
+  }
+
+  // No border top on the first
+  .dropdown-menu li:first-child > a {
+    border-top: 0;
+  }
+
+  // Hide the Top arrow of the dropdown menu.
+  // See bootstrap/navbar.less or comment these line if you want to show it again.
+  .navbar .nav > li > .dropdown-menu {
+    &:before {
+      display: none;
+    }
+    &:after {
+      display: none;
+    }
+  }
+
+
+  // Hover state
+  // -----------
+  .dropdown-menu li > a:hover,
+  .dropdown-menu li > a:focus,
+  .dropdown-submenu:hover > a {
+  }
+
+
+  // Active state
+  // ------------
+  .dropdown-menu .active > a,
+  .dropdown-menu .active > a:hover {
+  }
+
+
+  // Disabled state
+  // --------------
+  .dropdown-menu .disabled > a,
+  .dropdown-menu .disabled > a:hover {
+    color: @grayLight;
+  }
+
+  .dropdown-menu .disabled > a:hover {
+    background-color: transparent;
+  }
+
+
+  // Open State
+  // ----------
+  .nav li.dropdown.open > .dropdown-toggle {
+  }
+
+  // Active Open
+  .nav li.dropdown.active > .dropdown-toggle,
+  .nav li.dropdown.open.active > .dropdown-toggle {
+  }
+
+  // The Caret
+  .nav li.dropdown > .dropdown-toggle .caret {
+    display: none;
+  }
+
+  .nav li.dropdown.open > .dropdown-toggle .caret,
+  .nav li.dropdown.active > .dropdown-toggle .caret,
+  .nav li.dropdown.open.active > .dropdown-toggle .caret {
+  }
+  // End 
+}
+
+// Calling the styles
+.t3-mainnav {
+  .nav {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .nav > li {
+    padding: (@T3globalPadding/5) 3px;
+    border-right: 1px solid @T3borderColor;
+  }
+
+  .nav > li:last-child {
+  }
+
+  .nav > li > a {
+    color: @black;
+    font-family: @TPLArialNB;
+    padding: (@T3globalPadding/5);
+    text-shadow: none;
+    font-size: @T3biggerFontSize + 1px;
+  }
+
+  .nav > li > a:hover,
+  .nav > li > a:focus,
+  .dropdown.open > a.dropdown-toggle {
+    background: @black;
+    color: @white;
+    .box-shadow(0 0 5px @grayLight);
+  }
+
+  .t3-module {
+    border: 0;
+  }
+   
+}
+
+.t3-mainnav .t3-megamenu {
+  .nav > li > a.menu-home {
+    font-size: 0;
+    text-indent: -9999em;
+    text-align: center;
+    height: 20px;
+    width: 20px;
+    display: block;
+
+    i {
+      font-size: @T3biggerFontSize + 4px;
+      margin: 0;
+      text-indent: 0;
+      display: block;
+      vertical-align: top;
+    }
+  }
+}
+
+// ------------------------------------------------
+// Second Nav
+// ------------------------------------------------
+
+.navbar .secnav,
+.secnav {
+
+  .dropdown-menu {
+    left: auto;
+    min-width: 290px;
+    right: 0;
+    .border-radius(0);
+    
+    .dropdown-menu-inner { padding: @T3globalPadding/2; } 
+
+    &:before {display: none;} 
+  }
+
+  .nav {
+    float: right;
+    margin-right: -1px !important;
+  }
+
+  .nav > li {
+    border: 0;
+
+    > a {
+      background: @black;
+      color: @white;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      text-transform: none;
+      &:after {display: none;}
+    }
+
+    &.nav-user,
+    &.nav-video {
+      background: url("@{T3ImagePath}/stripe-bg-2.png") repeat 0 0;
+    }
+
+    &.nav-user.open > a,
+    &.nav-user.dropdown.open > a,
+    &.nav-user.dropdown.open > .dropdown-toggle {
+      background: #37b513 ;
+      &:hover, &:focus, &:active {
+        background: #37b513 ;
+      }
+    }
+
+    &.nav-twitter > a,
+    &.nav-twitter.open > a,
+    &.nav-twitter.dropdown.open > a,
+    &.nav-twitter.dropdown.open > .dropdown-toggle {
+      background-color: #138BB3;
+      &:hover, &:focus, &:active {
+        background-color: #138BB3;
+      }
+    }
+
+    &.nav-video > a,
+    &.nav-video.open > a,
+    &.nav-video.dropdown.open > a,
+    &.nav-video.dropdown.open > .dropdown-toggle {
+      background-color: #e04b40;
+      &:hover, &:focus, &:active {
+        background-color: #e04b40;
+      }
+    }
+
+    &.nav-acymailling > a,
+    &.nav-acymailling.open > a,
+    &.nav-acymailling.dropdown.open > a,
+    &.nav-acymailling.dropdown.open > .dropdown-toggle {
+        background-color: #F68916;
+      &:hover, &:focus, &:active {
+        background-color: #F68916;
+      }
+    }
+
+    &.languageswitcher-block {
+      a {
+        img {
+          vertical-align: top;
+          margin-top: 4px;
+        }
+      }
+      > .dropdown-menu {
+        padding: 5px;
+        line-height: normal;
+        min-width: 60px;
+
+
+        > li {
+          display: inline-block;
+          line-height: normal;
+          margin: 0px 4px 4px;
+          background: none;
+
+          a {
+            border: none;
+            display: block;
+            line-height: normal;
+            padding: 0;
+            width: 18px;
+            font-size: 0;
+            text-indent: -9999em;
+            .reset-filter();
+            border: solid 1px transparent;
+            img {
+              vertical-align: middle;
+              margin-top: 0;
+            }
+
+            &:hover {
+              background: none;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  li.nav-acymailling .dropdown-menu {
+    background: url("@{T3ImagePath}/subs-bg.png") repeat-x left top #F5F7F8;
+    .t3-module {
+      background: #F5F7F8;
+      .module-title {
+        border: none;
+        padding-bottom: 0;
+        padding-left: 0;
+      }
+    }
+  }
+
+  // Module 
+  .module {
+    margin-bottom: 0;
+    text-transform: none;   
+  }
+
+  .module-title {
+    background: none;
+    border-top: none;
+    border-bottom: 5px solid @T3borderColor;
+    color: @grayDarker;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: @headingsFontFamily;
+    margin-top: @T3globalMargin/2;
+    margin-bottom: @T3globalMargin/2;
+    padding-bottom: @T3globalPadding/4;
+    padding-left: 6px;
+    text-transform: uppercase;
+  }
+
+  .module-ct { padding: 0;}
+
+  
+  // JA Twitter
+  // ----------
+  .ja-twitter-tweets {
+    .ja-twitter-item {}
+
+    .ja-twitter-item .ja-twitter-source {
+      font-size: @T3smallFontSize;
+      margin-bottom: (@T3globalMargin/5);
+    }
+
+    .ja-twitter-item .ja-twitter-text {
+      font-weight: normal;
+      line-height: @baseLineHeight - 4px;
+      margin-bottom: (@T3globalMargin/5);
+    }
+
+    .ja-twitter-item .ja-twitter-date {
+      font-weight: normal;
+      font-size: @T3smallerFontSize;
+    }
+  }
+}
+
+.navbar .secnav .dropdown-menu:before,
+.navbar .secnav .dropdown-menu:after {
+  display: none !important;
+}
+
+
+// off-canvas
+// ---------------
+#off-canvas-nav {
+  .t3-mainnav .nav-collapse {
+    top: 0;
+  }
+}

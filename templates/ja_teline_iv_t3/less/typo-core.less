@@ -1,0 +1,835 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+
+// --------------------------------------------------
+// TYPOGRAPHY
+// --------------------------------------------------
+
+
+// BODY TEXT
+// ------------------------------------------------------
+
+// Paragraphs
+// ----------
+p {
+  margin: 0 0 @T3globalMargin / 2;
+  small, .small {
+    font-size: @T3smallerFontSize;
+    color: @grayLight;
+  }
+}
+
+.lead {
+  margin-bottom: @T3globalMargin;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: @baseLineHeight * 1.5;
+}
+
+
+// Emphasis & misc
+// ---------------
+
+small {
+  font-size: 85%; // Ex: 14px base font * 85% = about 12px
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+cite {
+  font-style: normal;
+}
+
+.muted {
+  color: @grayLight;
+}
+a.muted:hover,
+a.muted:focus        { color: darken(@grayLight, 10%); }
+
+.text-warning        { color: @warningText; }
+a.text-warning:hover,
+a.text-warning:focus { color: darken(@warningText, 10%); }
+
+.text-error          { color: @errorText; }
+a.text-error:hover,
+a.text-error:focus   { color: darken(@errorText, 10%); }
+
+.text-info           { color: @infoText; }
+a.text-info:hover,
+a.text-info:focus    { color: darken(@infoText, 10%); }
+
+.text-success        { color: @successText; }
+a.text-success:hover,
+a.text-success:focus { color: darken(@successText, 10%); }
+
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+
+.highlight {
+  background-color: #FFC;
+  font-weight: bold;
+  padding: 1px 4px;
+}
+
+
+
+// HEADINGS
+// ------------------------------------------------------
+
+h1, h2, h3, h4, h5, h6 {
+  margin: (@T3globalMargin / 2) 0;
+  font-family: @headingsFontFamily;
+  font-weight: @headingsFontWeight;
+  line-height: 1;
+  color: @headingsColor;
+  text-rendering: optimizelegibility; // Fix the character spacing for headings
+  
+  small {
+    font-weight: normal;
+    line-height: 1;
+    color: @grayLight;
+  }
+}
+
+h1 {
+  font-size: @baseFontSize * 2.5;
+  line-height: @baseLineHeight * 2;
+  small {
+    font-size: @baseFontSize * 2;
+  }
+}
+
+h2 {
+  font-size: @baseFontSize * 1.5; 
+  line-height: @baseLineHeight * 2;
+  small {
+    font-size: @baseFontSize * 1.2;
+  }
+}
+
+h3 {
+  font-size: @baseFontSize * 1.25; 
+  line-height: @baseLineHeight * 2; 
+  small {
+    font-size: @baseFontSize + 2px;
+  }
+}
+
+h4 {
+  font-size: @baseFontSize + 2px; 
+  line-height: @baseLineHeight;
+  small {
+    font-size: @baseFontSize;
+  }
+}
+
+h5 {
+  font-size: @baseFontSize + 1px; 
+  line-height: @baseLineHeight; 
+  small {
+    font-size: @baseFontSize - 2px;
+  }
+}
+
+h6 {
+  font-size: @baseFontSize; 
+  line-height: @baseLineHeight; 
+}
+
+
+
+// TITLES
+// ------------------------------------------------------
+
+// Page header
+// -----------
+.page-header {
+}
+
+.page-title,
+.page-header h1 {
+  line-height: 1;
+  margin: 0;
+}
+
+h1.ja-typo-title {
+  border-bottom: 8px solid @T3borderColor;
+  font-family: "Arial Narrow",Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  padding: 5px 0;
+  color: @gray;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+h2.ja-typo-title {
+  font-weight: normal;
+  margin-bottom: 0;
+  font-size: @T3biggerFontSize;
+  text-transform: uppercase;
+  line-height: normal;
+
+  span {
+    display: inline-block;
+    background: #f2f2f2;
+    padding: 3px 10px;
+  }
+}
+
+
+// Page Subheader
+// --------------
+.page-subheader {
+  border-bottom: 1px solid @T3borderColor;
+  margin: 0 0 @T3globalMargin;
+  .clearfix();
+}
+
+.page-subtitle,
+.page-subheader h2 {
+  line-height: 1;
+  margin: 0;
+}
+
+.page-header + .page-subheader {
+  margin-top: -@T3globalMargin; //If there is page header, then omit the space before page subheader
+}
+
+
+// Article Header
+// --------------
+.article-header {
+}
+
+.article-title,
+.article-header h1, {
+  margin: @T3globalMargin 0 @T3globalMargin/2 0;
+  line-height: 1;
+}
+
+// Smaller "Article Title" in Blog and List layout
+h2.article-title,
+.article-header h2 {
+}
+
+
+// Item Header
+// -----------
+.item-title {
+  font-weight: bold;
+}
+
+
+
+// LISTS
+// ------------------------------------------------------
+
+// Unordered and Ordered lists
+// ---------------------------
+ul, ol {
+  padding: 0;
+  margin: 0 0 @T3globalMargin / 2 25px;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li {
+  line-height: @baseLineHeight;
+}
+
+// Remove default list styles
+ul.unstyled,
+ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+
+// Single-line list items
+ul.inline,
+ol.inline {
+  margin-left: 0;
+  list-style: none;
+  > li {
+    display: inline-block;
+    .ie7-inline-block();
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+// Description Lists
+// -----------------
+dl {
+  margin-bottom: @baseLineHeight;
+}
+
+dt,
+dd {
+  line-height: @baseLineHeight;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: @T3globalMargin / 2;
+}
+
+// Horizontal layout (like forms)
+.dl-horizontal {
+  .clearfix(); // Ensure dl clears floats if empty dd elements present
+  dt {
+    float: left;
+    width: @horizontalComponentOffset - 20;
+    clear: left;
+    text-align: right;
+    .text-overflow();
+  }
+  dd {
+    margin-left: @horizontalComponentOffset;
+  }
+}
+
+
+
+
+// LABELS & BADGES
+// --------------------------------------------------
+
+// Base classes
+.label,
+.badge {
+  display: inline-block;
+  padding: 2px 4px;
+  font-size: @baseFontSize * .846;
+  font-weight: bold;
+  line-height: 14px; // ensure proper line-height if floated
+  color: @white;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+  background-color: @grayLight;
+}
+
+// Set unique padding and border-radius
+.label {
+  .border-radius(@baseBorderRadius);
+}
+
+.badge {
+  padding-left: 9px;
+  padding-right: 9px;
+  .border-radius(@baseBorderRadius);
+}
+
+// Hover state, but only for links
+a {
+  &.label:hover,
+  &.badge:hover {
+    color: @white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+// Colors
+// Only give background-color difference to links (and to simplify, we don't qualifty with `a` but [href] attribute)
+.label,
+.badge {
+  // Important (red)
+  &-important         { background-color: @errorText; }
+  &-important[href]   { background-color: darken(@errorText, 10%); }
+  // Warnings (orange)
+  &-warning           { background-color: @orange; }
+  &-warning[href]     { background-color: darken(@orange, 10%); }
+  // Success (green)
+  &-success           { background-color: @successText; }
+  &-success[href]     { background-color: darken(@successText, 10%); }
+  // Info (turquoise)
+  &-info              { background-color: @infoText; }
+  &-info[href]        { background-color: darken(@infoText, 10%); }
+  // Inverse (black)
+  &-inverse           { background-color: @grayDark; }
+  &-inverse[href]     { background-color: darken(@grayDark, 10%); }
+}
+
+// Quick fix for labels/badges in buttons
+.btn {
+  .label,
+  .badge {
+    position: relative;
+    top: -1px;
+  }
+}
+
+.btn-mini {
+  .label,
+  .badge {
+    top: 0;
+  }
+}
+
+// Quick fix for labels/badges in page-header- NNTH
+.page-header {
+  .label,
+  .badge {
+    vertical-align: middle;
+  }
+}
+
+
+
+// MISC
+// ------------------------------------------------------
+
+// Abbreviations and acronyms
+abbr[title],
+// Added data-* attribute to help out our tooltip plugin, per https://github.com/twitter/bootstrap/issues/5257
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted @grayLight;
+}
+
+abbr.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+
+// Blockquotes
+// -----------
+blockquote {
+  padding: 0 0 0 15px;
+  margin: 0 0 @T3globalMargin;
+  border-left: 5px solid @grayLighter;
+  p {
+    margin-bottom: 0;
+    font-size: @baseFontSize * 1.25;
+    font-weight: 300;
+    line-height: 1.25;
+  }
+  small {
+    display: block;
+    line-height: @baseLineHeight;
+    color: @grayLight;
+    &:before {
+      content: '\2014 \00A0';
+    }
+  }
+
+  // Float right with text-align: right
+  &.pull-right {
+    float: right;
+    padding-right: 15px;
+    padding-left: 0;
+    border-right: 5px solid @grayLighter;
+    border-left: 0;
+    p,
+    small {
+      text-align: right;
+    }
+    small {
+      &:before {
+        content: '';
+      }
+      &:after {
+        content: '\00A0 \2014';
+      }
+    }
+  }
+}
+
+
+// Quotes
+// ------
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+
+
+// Addresses
+// ---------
+address {
+  display: block;
+  margin-bottom: 0;
+  font-style: normal;
+  line-height: @baseLineHeight;
+}
+
+
+// code
+// ------
+code, pre {
+  font-size: @baseFontSize;
+}
+
+
+.ja-typo-blockswrap {
+  padding-top: @T3globalPadding;
+
+  .ja-typo-blockrow {
+    border-bottom: 1px dotted @T3borderColor;
+    padding-bottom: @T3globalPadding;
+  }
+
+  .ja-typo-blockct{
+    padding-top: @T3globalPadding/2;
+  }
+}
+
+.ja-typo-blockswrap:hover {
+
+  > h1.ja-typo-title {
+    color: #333;
+  }
+
+  h2.ja-typo-title > span {
+    background-color: #ddd;
+  }
+}
+
+// Icons Style
+// ------------
+.text-warning {
+    color: #C09853;
+}
+
+.text-error {
+    color: #B94A48;
+}
+
+.text-info {
+    color: #3A87AD;
+}
+
+.text-success {
+    color: #468847;
+}
+
+.muted {
+    color: @grayLight;
+}
+
+.text-warning, .text-error, .text-info,
+.text-success, .muted, .text-normal {
+  padding-left: 20px;
+
+  i[class^="icon-"] {
+    float: left;
+    font-size: 13px;
+    margin: 3px 0 0 -20px;
+  }
+}
+
+
+// dropcap
+// ----------
+.dropcap {
+  display: block;
+  float: left;
+  font-family: Georgia,Times,serif;
+  font-size: 60px;
+  line-height: 40px;
+  padding: 5px 8px 0 0;
+}
+
+#ja-typo .ja-typo-list {
+  margin: 0 !important;
+
+  li {
+    list-style: none;
+    padding-left: 20px;
+    margin: 0 0 5px 10px;
+
+    i[class^="icon-"] {
+      float: left;
+      font-size: 13px;
+      margin: 3px 0 0 -20px;
+    }
+  }
+}
+
+
+// blocknumber
+// -------------
+.blocknumber {
+  min-height: 44px;
+  padding: 5px 0 5px 55px;
+}
+
+.bignumber {
+  background-image: url("@{T3ImagePath}/blocknumber-bg.png");
+  background-repeat: no-repeat;
+  color: @white;
+  display: block;
+  font-family: Arial,sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  width: 44px;
+  float: left;
+  margin-left: -55px;
+}
+
+.blocknumber-1 .bignumber {
+  background-position: 0 0;
+}
+
+.blocknumber-2 .bignumber {
+  background-position: 0 -44px;
+}
+
+.blocknumber-3 .bignumber {
+  background-position: 0 -88px;
+}
+
+
+// Bubbles
+// -------------
+.ja-typo-bubble {
+  margin-bottom: @T3globalMargin;
+  position: relative;
+}
+
+.ja-typo-bubblect {
+  border: 3px solid @T3borderColor;
+  padding: 15px;
+}
+
+.ja-typo-bubble-meta {
+  font-weight: bold;
+  text-align: center;
+  margin-top: @T3globalMargin/2;
+}
+
+.bubble-2 .ja-typo-bubblect {
+  background: #DDDDDD;
+  border: none;
+}
+
+.bubble-3 .ja-typo-bubblect {
+    border: 3px solid @blue;
+}
+
+.bubble-4 .ja-typo-bubblect {
+  background: @blue;
+  border: none;
+  color: @white;
+}
+
+.bubble-5 .ja-typo-bubblect {
+  border: 3px solid @grayDarker;
+}
+
+.bubble-6 .ja-typo-bubblect {
+  background: @grayDarker;
+  border: none;
+  color: @white;
+}
+
+.bubble-rounded .ja-typo-bubblect {
+  .border-radius(10px);
+}
+
+
+// Message Boxes & Legend Styles
+// -----------------------------------
+
+// Message Boxes
+.ja-typo-box {
+    border: 3px solid @T3borderColor;
+    padding: 10px 15px;
+}
+
+.typo-box-icon {
+  padding-left: 50px;
+
+  i[class^="icon-"] {
+    float: left;
+    font-size: 30px;
+    margin: 5px 0 0 -40px;
+  }
+}
+
+.box-grey-1 {
+  background: #f7f7f7;
+}
+
+.box-grey-2 {
+  background: #F7F7F7;
+  border-style: dotted;
+}
+
+.box-hilite-1 {
+  background: #FFFFDD;
+  border-color: #D2D2B6;
+}
+
+.box-hilite-2 {
+  background: #FFFFDD;
+  border-color: #D2D2B6;
+  border-style: dotted;
+}
+
+.box-rounded {
+  .border-radius(8px);
+}
+
+// Legend Styles
+.ja-typo-legend {
+  border: 3px solid @T3borderColor;
+  padding: 20px 15px 15px;
+  position: relative;
+  margin-top: 10px;
+
+  .legend-title {
+    background: @white;
+    display: block;
+    font-family: Arial,sans-serif;
+    font-size: @T3bigFontSize;
+    font-weight: bold;
+    left: 10px;
+    line-height: normal;
+    margin: 0 !important;
+    padding: 5px !important;
+    position: absolute;
+    top: -17px;
+  }
+}
+
+.legend-2 {
+  border: 3px solid #CC3333;
+
+  .legend-title {
+    color: #CC3333;
+  }
+}
+
+.legend-rounded {
+  .border-radius(8px);
+}
+
+
+// Button
+#ja-typo {
+
+  .btn {
+    .border-radius(0);
+    margin: 0 10px 10px 0;
+
+    &:hover {
+      background-image: none;
+    }
+  }
+
+  .btn-primary {
+    background-image: linear-gradient(to bottom, #0088CC, #0044CC);
+    background-color: #006DCC;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: @white;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+
+    &:hover, &:focus {
+      background: #0044CC;
+    }
+  }
+
+  .btn.btn-rounded {
+    .border-radius(4px);
+  }
+
+  .btn-small.btn-rounded {
+    .border-radius(3px);
+  }
+
+  .btn-large.btn-rounded {
+    .border-radius(6px);
+  }
+}
+
+// badge
+#ja-typo {
+  .t3-module {
+    background: @white;
+    border: 1px solid #E5E5E5;
+    color: inherit;
+    margin-top: 20px;
+    position: relative;
+  }
+
+  .module-ct {
+    padding: @T3globalPadding;
+  }
+}
+
+// Form Fieldset
+fieldset legend {
+  border-bottom: none;
+  margin-bottom: 0;
+  background: @white;
+  display: block;
+  font-family: Arial,sans-serif;
+  font-size: @T3bigFontSize;
+  font-weight: bold;
+  padding: 0 5px;
+  width: auto;
+}
+
+fieldset.ja-typo-fieldset {
+    border: 3px solid #DDDDDD;
+    padding: 10px 15px;
+}
+
+fieldset.fieldset-2 {
+  border: 3px solid #CC3333;
+  .border-radius(10px);
+
+  legend {
+    color: #CC3333;
+  }
+}
+
+// Form Elements
+
+#ja-typo {
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin: 0 5px 0 0;
+  }
+
+  label[for="radio"],
+  label[for="checkbox"] {
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+  }
+}

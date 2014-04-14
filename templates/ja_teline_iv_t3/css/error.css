@@ -1,0 +1,80 @@
+/**
+ * ------------------------------------------------------------------------
+ * JA Teline IV T3 Template
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - Copyrighted Commercial Software
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites:  http://www.joomlart.com -  http://www.joomlancers.com
+ * This file may not be redistributed in whole or significant part.
+ * ------------------------------------------------------------------------
+ */
+
+body.page-error {
+  font-family: Arial,sans-serif;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+  color: #2C2C2C;
+}
+
+a {
+  color: #006699;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00334d;
+  text-decoration: none;
+}
+
+.error-page-wrap {
+  margin: 100px auto 0;
+  padding: 0;
+  position: relative;
+  text-align: center;
+}
+
+.error-page-wrap .inner {
+ 
+}
+
+
+/* Error code */
+.error-code {
+  color: #cc0000;
+  font-size: 250px;
+  font-family: "Arial Narrow",Arial,sans-serif;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+
+/* Error message */
+.error-message h2 {
+  display: block;
+  font-size: 50px;
+  line-height: 1;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.error-message p {
+  color: #666;
+  font-size: 180%;
+  line-height: 1.3;
+  margin: 0;
+}
+
+
+.error-message a {
+  color: #006699;
+}
+
+.error-message a:hover,
+.error-message a:focus, 
+.error-message a:active {
+  text-decoration: underline;
+  color: #00334d;
+}

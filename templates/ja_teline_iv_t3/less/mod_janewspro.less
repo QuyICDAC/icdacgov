@@ -1,0 +1,1319 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+@import "vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+div.ja-zinsec {
+
+  h2 {
+    left: 0;
+  }
+
+  .item.article-column  {
+    width: 33.3%;
+    float: left;
+  }
+
+  a {
+    color: @T3primaryColor;
+
+    &:hover {
+      color: @grayDarker;
+    }
+  }
+
+  &:hover {
+    .jazin-links li a,
+    .ja-zintitle > a { 
+      color: @grayDarker;
+    }
+  }
+}
+
+ul.jazin-links {
+  li {
+    list-style: none;
+
+    a {
+      color: @T3primaryColor;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+// ja-zinsec Color
+// ---------------
+
+.ja-zincontent,
+.ja-zinlinks {
+  color: @grayDarker;
+}
+
+// green
+.ja-zinsec.green:hover {
+  h2 > a {
+    color: @green;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    > span {
+      color: @green;
+    }
+  }
+
+  .item .ja-zincat h3 {
+    background-color: @green;
+    color: @white;
+
+    a {
+      color: @white;
+    }
+  }
+}
+
+// brick
+.ja-zinsec.brick:hover {
+  h2 > a {
+    color: @brick;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  h2 > a > span {
+    color: @brick;
+  }
+
+  .item .ja-zincat h3 {
+    background-color: @brick;
+    color: @white;
+
+    a {
+      color: @white;
+    }
+  }
+}
+
+// blue
+.ja-zinsec.blue:hover {
+  h2 > a {
+    color: @blue;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  h2 > a > span {
+    color: @blue;
+  }
+
+  .item .ja-zincat h3 {
+    background-color: @blue;
+    color: @white;
+
+    a {
+      color: @white;
+    }
+  }
+}
+
+// pink
+.ja-zinsec.pink:hover {
+  h2 > a {
+    color: @pink;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  h2 > a > span {
+    color: @pink;
+  }
+
+  .item .ja-zincat h3 {
+    background-color: @pink;
+    color: @white;
+
+    a {
+      color: @white;
+    }
+  }
+}
+
+// lime
+.ja-zinsec.lime:hover {
+  h2 > a {
+    color: @lime;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  h2 > a > span {
+    color: @lime;
+  }
+
+  .item .ja-zincat h3 {
+    background-color: @lime;
+    color: @white;
+
+    a {
+      color: @white;
+    }
+  }
+}
+
+// cyan
+.ja-zinsec.cyan:hover {
+  h2 > a {
+    color: @cyan;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  h2 > a > span {
+    color: @cyan;
+  }
+
+  .item .ja-zincat h3 {
+    background-color: @cyan;
+    color: @white;
+
+    a {
+      color: @white;
+
+    &:hover {
+      text-decoration: none;
+    }
+    }
+  }
+}
+
+// red
+.ja-zinsec.red:hover {
+  h2 > a {
+    color: @red;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  h2 > a > span {
+    color: @red;
+  }
+
+  .item .ja-zincat h3 {
+    background-color: @red;
+    color: @white;
+
+    a {
+      color: @white;
+    }
+  }
+}
+
+// orange
+.ja-zinsec.orange:hover {
+  h2 > a {
+    color: @orange;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  h2 > a > span {
+    color: @orange;
+  }
+
+  .item .ja-zincat h3 {
+    background-color: @orange;
+    color: @white;
+
+    a {
+      color: @white;
+    }
+  }
+}
+
+.ja-usersetting-options li { 
+  margin: 0; 
+  padding: 0; 
+}
+
+div.ja-zinwrap {
+  background: @white;
+  border: 1px solid @T3borderColor;
+  border-top: 0;
+
+  .ja-zin {
+    border-top: 5px solid @black;
+
+    .items-row { 
+      margin: 0; 
+      padding: 0; 
+      background: none; 
+      border: none;
+
+      &:before {
+        border: none;
+      }
+    }
+  }
+}
+
+
+// Default View 
+// ------------
+
+.ja-zinwrap.default {
+
+  .ja-zin {
+
+    .ja-box .ja-box-inner { 
+      border-top: 1px dotted #ddd;
+      border-left: 1px dotted #ddd;
+    }
+
+    .ja-box-first .ja-box-inner {
+      padding-top: 0; 
+      border-top: none;
+    }
+
+    .col-first { 
+      background-image: none;
+
+      .ja-box-inner {
+        border-left: none;
+      }
+    }
+
+    // Section
+    .ja-zinsec { 
+      padding: 18px 0 0; 
+      position: relative;
+
+      &:hover {
+        .item .ja-zincat h3 {
+          background-image: url("@{T3ImagePath}/arrow-3-l-ltr.png") !important;
+        }
+      }
+    }
+
+    // News Title 
+    h4.ja-zintitle {
+      font-size: @T3bigFontSize; 
+      line-height: 1.2;
+    }
+
+    // read more
+    p.readmore { 
+      float: none; 
+    }
+  }
+
+  .ja-zinsec h2 {
+    margin: 0 0 12px !important;
+    padding: 0 !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 24px;
+    left: 0;
+    font-family: @sansFontFamily;
+    background: url("@{T3ImagePath}/stripe-bg.png") repeat top;
+    text-indent: 4px;
+    letter-spacing: -1px;
+
+    a {
+      color: @black;
+      background: @white;
+      padding: 0 12px 0 4px;
+      display: inline-block;
+    }
+  }
+
+
+  // Category 
+  .ja-zincat h3 {
+    padding: 2px 15px 1px 2px !important;
+    margin: 0 0 5px -2px !important;
+    background-image: url("@{T3ImagePath}/arrow-3-ltr.png") !important;
+    background-position: right center !important;
+    background-repeat: no-repeat;
+    font-size: @T3smallFontSize;
+    text-transform: uppercase;
+    line-height: normal;
+    float: left;
+
+    a { 
+      color: @grayLight;
+
+      &:hover, &:active, &:focus {
+        color: @black; 
+        text-decoration: none;
+      }
+    }
+  }
+
+  // CONTENT
+  .ja-zincontent {
+    p { 
+      line-height: 15px;
+    }
+
+    // Image
+    img[align="right"] { 
+      margin: 3px 0 10px 5px; 
+      border: 1px solid #ddd; 
+    }
+
+    img[align="left"] { 
+      margin: 3px 10px 5px 0; 
+      border: 1px solid #ddd; 
+    }
+  }
+
+
+  // Meta
+  .ja-zinmeta { 
+    color: @grayLight; 
+    line-height: normal; 
+    .createdate {
+      font-size: @T3smallFontSize;
+    }
+  }
+
+  // MISC.
+
+  // User Settings
+  .ja-usersetting-wrap {
+    position: static;
+
+    &:hover, &:active, &:focus {
+      a.ja-usersetting-loadform {
+        background-color: @black;
+        border: 1px solid @black;
+        color: @white !important;
+        text-decoration: none;
+        .box-shadow(0 0 5px rgba(0,0,0,.5));
+      }
+    }
+  }
+
+  a.ja-usersetting-loadform {
+    background: url("@{T3ImagePath}/cog_8x8.png") no-repeat 8px center #ddd;
+    border: 1px solid @T3borderColor;
+    color: #666 !important;
+    font-size: @T3smallerFontSize;
+    padding: 2px 8px 1px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 15px;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    z-index: 10;
+    .border-radius(0);
+
+    &:hover, &:active, &:focus {
+      background-color: @black;
+      border: 1px solid @black;
+      color: @white !important;
+      text-decoration: none;
+      .box-shadow(0 0 5px rgba(0,0,0,.5));
+    }
+  }
+
+  .ja-usersetting-options {
+    background: @black;
+    color: #ccc;
+    font-size: @T3smallFontSize;
+    display: block;
+    margin-right: 0;
+    position: absolute;
+    width: 330px;
+    right: 10px;
+    top: 39px;
+    z-index: 9999;
+  }
+
+  .ja-usersetting-form { 
+    display: block; 
+    text-align: left;
+
+    input { margin: 0 2px 0 0; padding: 0; }
+
+    ul > li {
+      list-style: none;
+      
+      label {
+        display: inline-block;
+        font-size: @T3smallFontSize;
+      }
+    }
+  }
+
+  .ja-usersetting-form-inner { 
+    width: 330px; 
+  }
+
+  .ja-usersetting-row { 
+    padding: 8px 12px; 
+    border-bottom: 1px solid #2a2a2a; 
+  }
+
+  .ja-usersetting-options {
+    .border-radius(0);
+    ul {
+      margin: 0; 
+      padding: 0;
+
+      li { float: left; line-height: 22px; }
+    }
+    
+    ul.checkall li {
+      width: 100%;
+      float: none;
+    }
+
+    ul.catselect li {
+      width: 150px;
+      float: left;
+      white-space: nowrap;
+    }
+  }
+
+  // Options : Content 
+  .options-content li { 
+    padding: 0 8px 0 0;
+
+    input {
+      width: 22px;
+      background: @grayDarker;
+      color: @white;
+      border: 0;
+      margin-left: 5px;
+      text-align: center;
+    }
+  }
+
+  // Options : Images 
+  .options-img li { padding: 0 8px 0 0; }
+
+  // Actions 
+  .ja-usersetting-actions {
+    padding: 4px 8px 8px;
+    background: #2a2a2a;
+
+    .button {
+      background: @black;
+      border: 1px solid @grayDarker;
+      color: @white;
+      padding: 2px 8px 1px;
+      cursor: pointer;
+      font-size: 10px;
+
+      &:hover, &:focus {
+        background: #069;
+      }
+    }
+
+    .ja-cancel:hover,
+    .ja-cancel:focus {
+      background: #c00;
+    }
+  }
+
+// End default
+}
+
+
+// Linear View
+// -------------------------------------------
+
+.ja-zinwrap.linear {
+
+  .ja-zin {
+
+    .ja-box .ja-box-inner {
+      border: none;
+      background: url("@{T3ImagePath}/dot-2.gif") repeat-y 69% top;
+      margin: 12px 0 0;
+      padding: 0 12px;
+      position: relative;
+
+      .ja-zinlinks {
+        width: 26%;
+      }
+    }
+
+    .ja-zincontent {
+      margin-bottom: 12px;
+      width: 68%;
+    }
+
+    .ja-box-first .ja-box-inner { 
+      border-top: 0; 
+    }
+
+    .col-last .ja-box-inner { 
+      border-right: 0; 
+    }
+
+    // HEADING
+
+    // Section 
+    .ja-zinsec { 
+      padding: 18px 0 0; 
+      position: relative; 
+
+      h2 {
+        margin: 0 0 4px !important;
+        padding: 0 !important;
+        text-transform: uppercase;
+        font-family: @sansFontFamily;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 24px;
+        left: 0;
+        background: url("@{T3ImagePath}/stripe-bg.png") repeat top;
+        letter-spacing: -1px;
+        text-indent: 5px;
+
+        a {
+          color: @black;
+          background: @white;
+          padding: 0 12px 0 4px;
+          display: inline-block;
+        }
+      }
+    }
+
+    // green
+    .ja-zinsec.green:hover {
+      .subcats-selection li.active a,
+      .subcats-selection li a:hover {
+        color: @green;
+      }
+    }
+
+    // brick
+    .ja-zinsec.brick:hover {
+      .subcats-selection li.active a,
+      .subcats-selection li a:hover {
+        color: @brick;
+      }
+    }
+
+    // blue
+    .ja-zinsec.blue:hover {
+      .subcats-selection li.active a,
+      .subcats-selection li a:hover {
+        color: @blue;
+      }
+    }
+
+    // pink
+    .ja-zinsec.pink:hover {
+      .subcats-selection li.active a,
+      .subcats-selection li a:hover {
+        color: @pink;
+      }
+    }
+
+    // lime
+    .ja-zinsec.lime:hover {
+      .subcats-selection li.active a,
+      .subcats-selection li a:hover {
+        color: @lime;
+      }
+    }
+
+    // cyan
+    .ja-zinsec.cyan:hover {
+      .subcats-selection li.active a,
+      .subcats-selection li a:hover {
+        color: @cyan;
+      }
+    }
+
+    // red
+    .ja-zinsec.red:hover {
+      .subcats-selection li.active a,
+      .subcats-selection li a:hover {
+        color: @red;
+      }
+    }
+
+    // orange
+    .ja-zinsec.orange:hover {
+      .subcats-selection li.active a,
+      .subcats-selection li a:hover {
+        color: @orange;
+      }
+    }
+
+    // Category
+    .ja-zincat h3 {
+      margin: 0 0 2px !important;
+      padding: 0 12px 0 0 !important;
+      font-weight: normal;
+      font-size: @T3smallerFontSize;
+      line-height: normal;
+      text-transform: uppercase;
+      float: left;
+      background: url("@{T3ImagePath}/arrow-3-ltr.png") no-repeat right center;
+
+      a { color: @grayLight; }
+    }
+
+    // News Title
+    h4.ja-zintitle { 
+      margin: 0 12px 0 0 !important; 
+      padding: 0 !important; 
+      font-size: 15px; 
+    }
+
+    // CONTENT
+    .ja-zincontent {
+      p { 
+        margin: 5px 0 !important;
+
+        &.readmore { 
+          margin: 0 !important; 
+        }
+      }
+
+      // Image
+      img { 
+        margin: 3px 0 5px 0; 
+        border: 1px solid #ddd;
+
+        &[align="left"] { 
+          margin: 3px @T3globalMargin/2 3px 0;
+        }
+
+        &[align="right"] {
+          margin: 3px 0 3px @T3globalMargin/2;
+        }
+      }
+    }
+
+    p.readmore > a {
+      background: #ddd;
+      color: @grayDarker;
+      text-transform: uppercase;
+      font-size: @T3smallerFontSize;
+      font-weight: bold;
+      display: inline-block;
+      padding: 3px (@T3globalPadding/4);
+      position: relative;
+      line-height: 14px;
+
+      &:hover {
+        text-decoration: none;
+        color: @white;
+        background: @grayDarker;
+
+        &:after {
+          border-left: 10px solid @grayDarker;
+        }
+      }
+
+      &:after {
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid #ddd;
+        border-top: 10px solid transparent;
+        content: "";
+        position: absolute;
+        right: -9px;
+        top: 0;
+      }
+    }
+
+    // Meta
+    p.ja-zinmeta {
+      color: @grayLight;
+      line-height: normal;
+      clear: none;
+      margin: 0 !important;
+      padding-top: 3px;
+      font-size: @T3smallFontSize;
+    }
+
+    .ja-cats-slide-mainwrap {
+      padding-right: 50px;
+      background: url("@{T3ImagePath}/dot-1.gif") repeat-x bottom;
+    }
+
+    // SUBCATS SELECTION
+    .subcats-selection-wrap {
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+      position: relative;
+    }
+
+    .subcats-selection {
+      position: relative;
+      float: left;  
+      height: 30px;
+
+      li { 
+        padding: 0 5px;
+
+        a {
+          display: block;
+          float: left;
+          text-decoration: none;
+          color: @grayLight;
+          font-size: @T3smallFontSize;
+          line-height: 30px;
+          text-transform: uppercase;
+          padding: 0 3px;
+
+          &:hover {
+            background: url("@{T3ImagePath}/arrow-up-line.gif") no-repeat center bottom;
+            color: @black;
+          }
+
+          &.subcat-more { 
+            display: none; 
+          }
+
+          &.subcat-more span {
+            background: url("@{T3ImagePath}/arrow-3-ltr.png") no-repeat right #666;
+            color: @grayDarker;
+            width: 16px;
+            height: 12px;
+            text-indent: -1000em;
+            display: block;
+            margin-top: 9px;
+            .border-radius(3px);
+          }
+        }
+
+        a.subcat-more:hover span { 
+          background-color: @black; 
+          color: @white; 
+        }
+
+        &.active a {
+          background: url("@{T3ImagePath}/arrow-up-line.gif") no-repeat center bottom;
+          color: @black;
+        }
+      }
+    }
+
+    .ja-cats-slide-mainwrap {
+      position: relative; 
+      overflow: hidden;
+      clear: both;
+    }
+
+    .ja-articles-mainwrap { 
+      position: relative; 
+      min-height: 160px; 
+    }
+
+    .ja-articles { 
+      position: absolute; 
+      width: 100%; 
+    }
+
+    // Control Buttons 
+    .ja-newspro-control {
+      width: 34px;
+      height: 20px;
+      position: absolute;
+      bottom: 2px;
+      right: 6px;
+
+      a {
+        display: block;
+        float: left;
+        width: 14px;
+        height: 14px;
+        text-indent: -1000em;
+        background: url("@{T3ImagePath}/back-btn-ltr.png") no-repeat center #f0f0f0;
+        border: 1px solid @T3borderColor;
+
+        &:hover, &:active, &:focus {
+          background-color: @black;
+          border: 1px solid @black;
+        }
+      }
+
+      a.ja-newspro-control-next {
+        float: right;
+        background: url("@{T3ImagePath}/next-btn-ltr.png") no-repeat center #f0f0f0;
+
+        &:hover, &:active, &:focus {
+          background-color: @black;
+        }
+      }
+    }
+
+    p.readmore { 
+      float: none; 
+    }
+  }
+
+  // End linear
+}
+
+
+// Pulse View 
+// -------------------------------------------
+.ja-zinwrap.pulse {
+
+  .ja-zin {
+
+    .ja-box .ja-box-inner { 
+      margin: 0; 
+      padding: 0;
+      border: none;
+    }
+
+    .col-first { 
+      background-image: none; 
+    }
+
+    .ja-zinpulse { 
+      border-bottom: 1px solid @T3borderColor; 
+      display: block;
+
+      &:hover { 
+        background: #fffae5;
+      }
+    }
+
+    .ja-zinpulse-cell-inner {
+      display: block;
+      padding: 4px 8px;
+      border-left: 1px solid @T3borderColor;
+      min-height: 50px;
+    }
+
+    p.readmore { 
+      float: none; 
+      line-height: normal;
+    } 
+  }
+
+  // PULSE ROW
+  .row0 { background: @white; }
+  .row1 { background: #ecf3f7; }
+
+  // Pulse bar ---
+  .ja-zinpulse-bar { 
+    width: 80px;
+
+    .ja-zinpulse-cell-inner { 
+      border-left: 0; 
+    }
+
+    span { 
+      margin-top: 10px; 
+    }
+  }
+
+  // Pulse News
+  .ja-zinpulse-news { 
+    width: 350px;
+
+    .ja-zinpulse-cell-inner { 
+      padding: 4px; 
+    }
+
+    img { 
+      margin: 0 8px 0 0; 
+    }
+
+    h4.ja-zintitle { 
+      margin: 5px 0 3px !important; 
+      padding: 0 !important; 
+      font-weight: bold; 
+      font-size: @baseFontSize; 
+      line-height: normal;
+    }
+
+    span.createdby {
+      background: none;
+      padding: 0;
+      margin: 0;
+      color: @grayLight;
+      text-transform: uppercase;
+      font-size: @T3smallFontSize;
+      font-family: @narrowFontFamily;
+    }
+
+    p.readmore {
+      margin-bottom: 0;
+
+      > a {
+        background: url("@{T3ImagePath}/arrow-l.png") no-repeat left center;
+        color: @grayLight;
+        display: inline-block;
+        font-size: @T3smallerFontSize;
+        font-weight: bold;
+        line-height: 14px;
+        padding-left: 8px;
+
+        &:hover, &:active, &:focus {
+          background: url("@{T3ImagePath}/arrow-ltr.png") no-repeat left center;
+          color: @black;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  // Pulse Cat
+  .ja-zinpulse-cat { 
+    width: 110px; 
+    text-align: center;
+
+    span {
+      margin-top: 5px;
+      display: block;
+      font-size: @T3smallFontSize;
+      font-family: @narrowFontFamily;
+      text-transform: uppercase;
+    }
+
+    a { color: #666; }
+  }
+
+  // Pulse Meta
+  .ja-zinpulse-meta { 
+    width: 90px; 
+    text-align: center;
+
+    span {
+      margin-top: 5px;
+      display: block;
+      font-size: @T3smallFontSize;
+      font-family: @narrowFontFamily;
+      text-transform: uppercase;
+      color: #666;
+    }
+  }
+
+  // HEADING
+
+  // Section
+  .ja-zinsec { 
+    padding: 0; 
+    position: relative;
+
+    h2 {
+      background: #ddd;
+      border-bottom: 1px solid @T3borderColor;
+      margin: 0 !important;
+      padding: 5px 0 !important;
+      text-transform: uppercase;
+      font-size: 18px;
+      line-height: @baseLineHeight;
+      letter-spacing: -1px;
+      font-weight: bold;
+      text-indent: 85px;
+      left: 0;
+
+      a { 
+        color: @black;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &:hover {
+      h2 > a, 
+      h2 > a > span {
+        color: @white;
+        text-shadow: none;
+      }
+    }
+  }
+
+  // Category 
+  .ja-zincat {
+    padding: (@T3globalPadding/4) (@T3globalPadding/2);
+    border-bottom: 1px solid @T3borderColor;
+
+    h3 {
+      padding: 0 15px 0 0 !important;
+      margin: 0 !important;
+      line-height: normal;
+      background: url("@{T3ImagePath}/arrow-3-ltr.png") no-repeat right center;
+      font-size: @T3smallFontSize;
+      font-weight: bold;
+      text-transform: uppercase;
+      float: left;
+
+      a { 
+        color: @grayLight;
+
+        &:hover, &:active, &:focus {
+          color: @black; 
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  // ja-zinsec Color
+  // ---------------
+
+  // green
+  .ja-zinsec.green:hover {
+    h2 {
+      background: @green;
+    }
+  }
+
+  // brick
+  .ja-zinsec.brick:hover {
+    h2 {
+      background: @brick;
+    }
+  }
+
+  // blue
+  .ja-zinsec.blue:hover {
+    h2 {
+      background: @blue;
+    }
+  }
+
+  // pink
+  .ja-zinsec.pink:hover {
+    h2 {
+      background: @pink;
+    }
+  }
+
+  // lime
+  .ja-zinsec.lime:hover {
+    h2 {
+      background: @lime;
+    }
+  }
+
+  // cyan
+  .ja-zinsec.cyan:hover {
+    h2 {
+      background: @cyan;
+    }
+  }
+
+  // red
+  .ja-zinsec.red:hover {
+    h2 {
+      background: @red;
+    }
+  }
+
+  // orange
+  .ja-zinsec.orange:hover {
+    h2 {
+      background: @orange;
+    }
+  }
+
+// End pulse
+}
+
+// Theme Mobile
+.ja-zinwrap.mobile {
+  border: none;
+
+  .ja-zin .ja-box .ja-box-inner {
+    border-top-color: @T3borderColor;
+  }
+
+  .ja-zin h4.ja-zintitle {
+    font-size: 15px;
+  }
+
+  .ja-zin .ja-zinmeta {
+    margin-top: @T3globalMargin/4;
+
+    .createdate {
+      font-size: @T3smallerFontSize;
+    }
+  }
+  
+  .ja-zinsec {
+      padding: 18px 0 0; 
+      position: relative;
+
+    h2 {
+      padding: 0;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 24px;
+      font-family: @sansFontFamily;
+      background: url("@{T3ImagePath}/stripe-bg.png") repeat top;
+      text-indent: 4px;
+      letter-spacing: -1px;
+
+      a {
+        color: @black;
+        background: @white;
+        padding: 0 12px 0 4px;
+        display: inline-block;
+      }
+    }
+  }
+
+  .ja-zincontent {
+    margin-bottom: @T3globalMargin/2;
+    min-height: 140px;
+
+    .createdate {
+      font-size: @T3smallFontSize;
+    }
+
+    img {
+      margin-bottom: @T3globalMargin/2;
+    }
+
+    img[align="left"] {
+      margin-right: @T3globalMargin*0.75;
+      margin-left: 0;
+    }
+
+    img[align="right"] {
+      margin-left: @T3globalMargin*0.75;
+      margin-right: 0;
+    }
+  }
+
+  .ja-zintheme {
+    .ja-zincat h3 {
+      background: url("@{T3ImagePath}/arrow-3-ltr.png") no-repeat right center;
+      float: left;
+      font-size: 11px;
+      line-height: normal;
+      margin: 0 0 5px -2px !important;
+      padding: 2px 15px 1px 2px !important;
+      text-transform: uppercase;
+      
+      a {
+        &:hover, &:focus, &:active {
+          text-decoration: none;
+        }
+      }
+    }
+
+    &:hover {
+      .ja-zincat h3 {
+        background-image: url("@{T3ImagePath}/arrow-3-l-ltr.png") !important;
+      }
+    }
+
+    p.readmore > a {
+      background: #ddd;
+      color: @grayDarker;
+      text-transform: uppercase;
+      font-size: @T3smallerFontSize;
+      font-weight: bold;
+      display: inline-block;
+      padding: 3px (@T3globalPadding/4);
+      position: relative;
+      line-height: 14px;
+
+      &:hover {
+        text-decoration: none;
+        color: @white;
+        background: @grayDarker;
+
+        &:after {
+          border-left: 10px solid @grayDarker;
+        }
+      }
+
+      &:after {
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid #ddd;
+        border-top: 10px solid transparent;
+        content: "";
+        position: absolute;
+        right: -9px;
+        top: 0;
+      }
+    }
+  }
+  
+
+  .ja-zinlinks ul li {
+    background: url("@{T3ImagePath}/arrow-ltr.png") no-repeat 0 5px;
+    padding: 0 0 0 10px;
+  }
+}
+
+
+// min-width: 768px and max-width: 979px
+// -------------------------------------------------------
+@media (min-width: 768px) and (max-width: 979px) {
+
+  .ja-zinwrap.default {
+
+    // CONTENT
+    .ja-zincontent {
+
+      // Image
+      img[align="left"],
+      img[align="right"] { 
+        margin: 5px 0;
+      }
+    }
+  }
+
+  // pulse
+  .ja-zinwrap.pulse {
+    .ja-zin .ja-zinpulse-cell-inner {
+      min-height: 55px;
+    }
+
+    .ja-zinpulse-news {
+      width: 53%;
+
+      h4.ja-zintitle {
+        line-height: normal;
+        margin: 0 0 3px !important;
+      }
+    }
+
+    .ja-zinpulse-cat {
+      width: 15%;
+
+    }
+
+    .ja-zinpulse-meta {
+      width: 15%;
+    }
+
+  }
+
+  // End
+}

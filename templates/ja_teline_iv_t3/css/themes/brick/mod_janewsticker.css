@@ -1,0 +1,36 @@
+
+
+.headline {
+  padding: 5px 15px;
+  border-left: 1px solid #ccc;
+  height: 20px;
+}
+.ja-healineswrap em,
+.ja-healineswrap div.ja-headlines {
+  display: inline-block;
+  vertical-align: top;
+}
+.ja-healineswrap em {
+  font-weight: bold;
+  color: #999;
+  font-style: normal;
+}
+.ja-headelines-buttons {
+  padding-top: 3px;
+}
+div.ja-headlines {
+  height: 20px;
+}
+div.ja-headlines .ja-headlines-item {
+  height: 20px;
+}
+div.ja-headlines a {
+  color: #444;
+  padding: 0 5px;
+}
+div.ja-headlines a:hover {
+  background: #2c2c2c;
+  text-decoration: none;
+  color: #fff;
+}
+

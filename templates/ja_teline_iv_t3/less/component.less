@@ -1,0 +1,82 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+
+.com_content body,
+.com_mailto body {
+  padding-top: 0;
+}
+
+.t3-content {
+  border: none;
+  padding: @T3globalPadding 0;
+}
+
+
+//----------------------------------------------------------------------
+// K2 Popup
+//----------------------------------------------------------------------
+.com_k2 {
+	a.toolbar {
+		&:hover, &:active, &:focus {
+			text-decoration: none;
+		}
+	}
+
+	.t3-content {
+		border: 0;
+		padding: 0;
+
+		#k2FrontendContainer {
+			#k2FrontendEditToolbar {
+				h2.icon-48-k2 {
+					background: url("@{T3ImagePath}/system/K2_Logo_105x40_24.png") no-repeat 0 50%;
+					display: inline-block;
+				}
+			}
+
+			table.adminFormK2Container {
+				td {
+					&.adminK2RightCol {
+						label {
+							display: inline-block;
+							margin: 0 10px 0 0;
+							padding-top: 0;
+
+							input {
+								margin: 3px 0 0 -18px;
+							}
+						}
+
+						input {
+							margin: 0;
+						}
+					}
+				}
+
+				h3.ui-accordion-header {
+					line-height: normal;
+				}
+
+				.modal {
+				  background: none;
+				  border: none;
+				  left: 0;
+				  margin: 0;
+				  position: inherit;
+				  right: auto;
+				  top: 0;
+				  width: auto;
+				  z-index: 10;
+				  .border-radius(0px);
+				  .box-shadow(none);
+				}
+
+				img.calendar {
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}

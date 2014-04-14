@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>Jumpmenu Module</name>
+    <author>muratyil</author>
+	<creationDate>Jan 2012</creationDate>
+	<copyright>www.joomlatema.net</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>destek@joomlatema.net</authorEmail>
+	<authorUrl>www.joomlatema.net</authorUrl><description>
+	<version>1.2</version>
+<![CDATA[
+		<style type='text/css'>span.readonly { padding: 10px; font-family: Arial; font-size:13px !important; font-weight: normal !important; text-align: left; color: #4d4d4d; line-height: 24px; } span.readonly h1 { clear:both; font-family: Georgia, sans-serif; font-size:38px; margin:30px 20px 23px; padding:0px 0px 24px 10px; color:#333; border-bottom: 1px solid #eee; font-weight: normal; } span.readonly p { margin: 0 26px 10px } span.readonly p a { color: #ab3f0a } span.readonly p.homepage { margin-top: 30px } span.readonly p.license { border-top: 1px solid #eee; font-size: 11px; margin: 30px 26px 0; padding: 6px 0; }</style><span class='readonly'><h1>Jumpmenu Module <small>ver. 1.2</small></h1><p class="img-logo"><img src="../modules/mod_jumpmenu/admin/logo.png" width="175" height="151" align="right"  />Jumpmenu Module is a free extension developed by <a href='http://www.joomlatema.net' target='_blank' style='color: #146295'>Joomlatema.Net</a>.</p><p>
+<br>Features:
+    <ul style="margin-left:15px;">
+    <li>Joomla 1.6-1.7 and 2.5 compatible</li>
+	<li>Enter up to 40 links</li>
+	<li>2 Module Heading Positions</li>
+	<li>Text-Align Option</li>
+	<li>RTL and LTR Directions</li></ul>
+.</p> <p class='homepage'><a href='http://www.joomlatema.net' target='_blank'>http://www.joomlatema.net</a></p><p class='license'>Thanks for choosing us. <a target="_blank" href="http://www.joomlatema.net/forum">Support Forum.</a></p></span>
+	]]></description>
+    <files>
+       <filename module="mod_jumpmenu">mod_jumpmenu.php</filename>
+	   <filename>mod_jumpmenu.xml</filename>
+	   <filename>index.html</filename>
+	   <folder>admin</folder>
+    </files>
+	<languages>
+		<language tag="en-GB">language/en-GB.mod_jumpmenu.ini</language>
+		<language tag="tr-TR">language/tr-TR.mod_jumpmenu.ini</language>
+	</languages>
+	<config>
+	<fields name="params">
+	 <fieldset name="GENERAL_SETTINGS" addfieldpath="/modules/mod_jumpmenu/admin/elements">
+          <field name="moduleclass_sfx" type="text" default="" label="MOD_JUMPMENU_MODULE_CLASS_SUFFIX" description="Modül Sınıf Soneki" />
+		<field name="destination" type="list" default="blank" label="MOD_JUMPMENU_OPEN_TARGET" description="MOD_JUMPMENU_OPEN_TARGET">
+			<option value="MM_jumpMenu('parent',this,0)">TARGET_SELF</option>
+			<option value="MM_jumpMenu('window.open()',this,0)">TARGET_BLANK</option>
+		</field>
+		<field name="heading" type="text" default="" label="MOD_JUMPMENU_HEADING" description="MOD_JUMPMENU_HEADING_DESC" />
+		<field name="headpos" type="list" default="1" label="MOD_JUMPMENU_HEADING_POS" description="MOD_JUMPMENU_HEADING_POS_DESC">
+			<option value="1">UPPER_POS</option>
+			<option value="0">SIDE_POS</option>
+		</field>
+		<field name="urltext0" type="text" default="----Select----" label="MOD_JUMPMENU_LINKS_HEADING" description="MOD_JUMPMENU_LINKS_HEADING_DESC" />
+		<field name="textalign" type="list" default="center" label="MOD_JUMPMENU_TEXT_ALIGN" description="MOD_JUMPMENU_TEXT_ALIGN_DESC">
+			<option value="center">MOD_JUMPMENU_CENTER</option>
+			<option value="right">MOD_JUMPMENU_RIGHT</option>
+			<option value="left">MOD_JUMPMENU_LEFT</option>
+		</field>
+		<field name="textdirection" type="list" default="ltr" label="MOD_JUMPMENU_TEXT_DIREXTION" description="MOD_JUMPMENU_TEXT_DIREXTION_DESC">
+			<option value="rtl">MOD_JUMPMENU_RTL</option>
+			<option value="ltr">MOD_JUMPMENU_LTR</option>
+		</field>				
+            </fieldset>
+			<fieldset name="LINK_GROUP1" addfieldpath="/modules/mod_jumpmenu/admin/elements">
+ 	        <field type="asset" path="modules/mod_jumpmenu/admin/" />
+			<field name="url1" type="text" default="" label="MOD_JUMPMENU_LINK1" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext1" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK1" description="MOD_JUMPMENU_TEXT_FOR_LINK_DESC">		
+		</field>
+		<field name="url2" type="text" default="" label="MOD_JUMPMENU_LINK2" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext2" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK2" description="MOD_JUMPMENU_TEXT_FOR_LINK_DESC">		
+		</field>
+		<field name="url3" type="text" default="" label="MOD_JUMPMENU_LINK3" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext3" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK3" description="MOD_JUMPMENU_TEXT_FOR_LINK_DESC">		
+		</field>
+		<field name="url4" type="text" default="" label="MOD_JUMPMENU_LINK4" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext4" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK4" description="MOD_JUMPMENU_TEXT_FOR_LINK_DESC">		
+		</field>
+		<field name="url5" type="text" default="" label="MOD_JUMPMENU_LINK5" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext5" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK5" description="MOD_JUMPMENU_TEXT_FOR_LINK_DESC">		
+		</field>
+		<field name="url6" type="text" default="" label="MOD_JUMPMENU_LINK6" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext6" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK6" description="MOD_JUMPMENU_TEXT_FOR_LINK_DESC">		
+		</field>
+		<field name="url7" type="text" default="" label="MOD_JUMPMENU_LINK7" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext7" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK7" description="MOD_JUMPMENU_TEXT_FOR_LINK_DESC">		
+		</field>
+		<field name="url8" type="text" default="" label="MOD_JUMPMENU_LINK8" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext8" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK8" description="MOD_JUMPMENU_TEXT_FOR_LINK_DESC">		
+		</field>
+		<field name="url9" type="text" default="" label="MOD_JUMPMENU_LINK9" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext9" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK9" description="MOD_JUMPMENU_TEXT_FOR_LINK_DESC">		
+		</field>
+		<field name="url10" type="text" default="" label="MOD_JUMPMENU_LINK10" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext10" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK10" description="MOD_JUMPMENU_TEXT_FOR_LINK_DESC">		
+		</field>
+          </fieldset>
+						
+           <fieldset name="LINK_GROUP2" addfieldpath="/modules/mod_jumpmenu/admin/elements"> 
+        			<field name="url11" type="text" default="" label="MOD_JUMPMENU_LINK11" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext11" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK11" description="MOD_JUMPMENU_TEXT_FOR_LINK_DESC">		
+		</field>
+		<field name="url12" type="text" default="" label="MOD_JUMPMENU_LINK12" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext12" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK12" description="MOD_JUMPMENU_TEXT_FOR_LINK_DESC">		
+		</field>
+		<field name="url13" type="text" default="" label="MOD_JUMPMENU_LINK13" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext13" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK13" description="MOD_JUMPMENU_TEXT_FOR_LINK_DESC">		
+		</field>
+		<field name="url14" type="text" default="" label="MOD_JUMPMENU_LINK14" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext14" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK14" description="MOD_JUMPMENU_TEXT_FOR_LINK_DESC">		
+		</field>
+		<field name="url15" type="text" default="" label="MOD_JUMPMENU_LINK15" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext15" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK15" description="MOD_JUMPMENU_TEXT_FOR_LINK_DESC">		
+		</field>
+		<field name="url16" type="text" default="" label="MOD_JUMPMENU_LINK16" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext16" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK16" description="MOD_JUMPMENU_TEXT_FOR_LINK">		
+		</field>
+		<field name="url17" type="text" default="" label="MOD_JUMPMENU_LINK17" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext17" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK17" description="MOD_JUMPMENU_TEXT_FOR_LINK">		
+		</field>
+		<field name="url18" type="text" default="" label="MOD_JUMPMENU_LINK18" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext18" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK18" description="MOD_JUMPMENU_TEXT_FOR_LINK">		
+		</field>
+		<field name="url19" type="text" default="" label="MOD_JUMPMENU_LINK19" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext19" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK19" description="MOD_JUMPMENU_TEXT_FOR_LINK">		
+		</field>
+		<field name="url20" type="text" default="" label="MOD_JUMPMENU_LINK20" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext20" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK20" description="MOD_JUMPMENU_TEXT_FOR_LINK">		
+		</field>
+            </fieldset>
+            <fieldset name="LINK_GROUP3" addfieldpath="/modules/mod_jumpmenu/admin/elements"> 
+		<field name="url21" type="text" default="" label="MOD_JUMPMENU_LINK21" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext21" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK21" description="MOD_JUMPMENU_TEXT_FOR_LINK">		
+		</field>
+		<field name="url22" type="text" default="" label="MOD_JUMPMENU_LINK22" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext22" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK22" description="MOD_JUMPMENU_TEXT_FOR_LINK">		
+		</field>
+		<field name="url23" type="text" default="" label="MOD_JUMPMENU_LINK23" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext23" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK23" description="MOD_JUMPMENU_TEXT_FOR_LINK">		
+		</field>
+		<field name="url24" type="text" default="" label="MOD_JUMPMENU_LINK24" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext24" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK24" description="MOD_JUMPMENU_TEXT_FOR_LINK">		
+		</field>
+		<field name="url25" type="text" default="" label="MOD_JUMPMENU_LINK25" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext25" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK25" description="MOD_JUMPMENU_TEXT_FOR_LINK">		
+		</field>
+		<field name="url26" type="text" default="" label="MOD_JUMPMENU_LINK26" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext26" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK26" description="MOD_JUMPMENU_TEXT_FOR_LINK">		
+		</field>
+		<field name="url27" type="text" default="" label="MOD_JUMPMENU_LINK27" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext27" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK27" description="MOD_JUMPMENU_TEXT_FOR_LINK">		
+		</field>
+		<field name="url28" type="text" default="" label="MOD_JUMPMENU_LINK28" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext28" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK28" description="MOD_JUMPMENU_TEXT_FOR_LINK">		
+		</field>
+		<field name="url29" type="text" default="" label="MOD_JUMPMENU_LINK29" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext29" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK29" description="MOD_JUMPMENU_TEXT_FOR_LINK">		
+		</field>
+		<field name="url30" type="text" default="" label="MOD_JUMPMENU_LINK30" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext30" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK30" description="MOD_JUMPMENU_TEXT_FOR_LINK">		
+		</field>
+		</fieldset>
+		  <fieldset name="LINK_GROUP4" addfieldpath="/modules/mod_jumpmenu/admin/elements">
+		<field name="url31" type="text" default="" label="MOD_JUMPMENU_LINK31" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext31" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK31" description="MOD_JUMPMENU_TEXT_FOR_LINK">		
+		</field>
+		<field name="url32" type="text" default="" label="MOD_JUMPMENU_LINK32" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext32" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK32" description="MOD_JUMPMENU_TEXT_FOR_LINK">		
+		</field>
+		<field name="url33" type="text" default="" label="MOD_JUMPMENU_LINK33" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext33" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK33" description="MOD_JUMPMENU_TEXT_FOR_LINK">		
+		</field>
+		<field name="url34" type="text" default="" label="MOD_JUMPMENU_LINK34" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext34" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK34" description="MOD_JUMPMENU_TEXT_FOR_LINK">		
+		</field>
+		<field name="url35" type="text" default="" label="MOD_JUMPMENU_LINK35" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext35" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK35" description="MOD_JUMPMENU_TEXT_FOR_LINK">		
+		</field>
+		<field name="url36" type="text" default="" label="MOD_JUMPMENU_LINK36" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext36" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK36" description="MOD_JUMPMENU_TEXT_FOR_LINK">		
+		</field>
+		<field name="url37" type="text" default="" label="MOD_JUMPMENU_LINK37" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext37" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK37" description="MOD_JUMPMENU_TEXT_FOR_LINK">		
+		</field>
+		<field name="url38" type="text" default="" label="MOD_JUMPMENU_LINK38" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext38" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK38" description="MOD_JUMPMENU_TEXT_FOR_LINK">		
+		</field>
+		<field name="url39" type="text" default="" label="MOD_JUMPMENU_LINK39" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext39" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK39" description="MOD_JUMPMENU_TEXT_FOR_LINK">		
+		</field>
+		<field name="url40" type="text" default="" label="MOD_JUMPMENU_LINK40" description="MOD_JUMPMENU_LINK_DESC">		
+		</field>
+		<field name="urltext40" type="text"  default="" label="MOD_JUMPMENU_TEXT_FOR_LINK40" description="MOD_JUMPMENU_TEXT_FOR_LINK">		
+		</field>
+		</fieldset>	
+            <fieldset name="UPDATE" addfieldpath="/modules/mod_jumpmenu/admin/elements">
+                <field type="update" name="module_updates" /> 
+            </fieldset>
+            <fieldset name="JUMPMENU_ABOUT" addfieldpath="/modules/mod_jumpmenu/admin/elements">
+                <field type="about" name="about_us" /> 
+            </fieldset>
+	
+		</fields>
+	</config>
+</extension>

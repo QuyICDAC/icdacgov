@@ -1,0 +1,54 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+
+// VARIABLES & MIXINS
+// ------------------
+@import "vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+// Headlines
+.headline {
+  padding: (@T3globalPadding/4) (@T3globalPadding*0.75);
+  border-left: 1px solid @T3borderColor;
+  height: @baseLineHeight;
+}
+
+.ja-healineswrap {
+
+  em,
+  div.ja-headlines  {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  em {
+    font-weight: bold;
+    color: @grayLight;
+    font-style: normal;
+  }
+}
+
+.ja-headelines-buttons {
+  padding-top: 3px;
+}
+
+div.ja-headlines {
+  height: 20px;
+
+  .ja-headlines-item {
+    height: 20px;
+  }
+
+  a {
+    color: @grayDark;
+    padding: 0 5px;
+
+    &:hover {
+      background: @grayDarker;
+      text-decoration: none;
+      color: @white;
+    }
+  }
+}

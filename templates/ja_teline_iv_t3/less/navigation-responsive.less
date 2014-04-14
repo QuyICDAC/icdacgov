@@ -1,0 +1,303 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+// XTABLET
+// -------------------------------------------------------------
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .t3-mainnav .nav > li > a {
+    padding: 3px;
+  }
+  .navbar .secnav,
+  .secnav {
+    li:hover, li:focus, li:active {
+      .dropdown-menu {
+        display: block !important;
+      }
+    }
+  }
+}
+
+// min-width: 768px and max-width: 979px
+// -------------------------------------------------------
+@media (min-width: 768px) and (max-width: 979px) {
+  .t3-mainnav {
+    border-bottom: solid 1px @T3borderColor;
+    .navbar-inner {
+      .nav-collapse {
+        border-bottom: solid 5px @black;
+        float: left;
+        width: 100%;
+      }
+
+      .nav-collapse .span9 {
+        width: 100% !important; 
+        margin-left: 0 !important;
+      }
+
+    }
+  } 
+
+  .t3-mainnav .secnav {
+    float: right; 
+    width: auto;
+  }
+}
+
+
+
+// ---------------------------------------------------------
+// RESPONSIVE NAVIFATION FOR MOBILE
+// ---------------------------------------------------------
+@media (max-width: @navbarCollapseWidth) {
+
+
+  // -------------------------------------------------------
+  // NAVIGATIONS ELEMENTS
+  // -------------------------------------------------------
+  .t3-mainnav {
+    border-top: none;
+    .navbar-inner {
+      background: url("@{T3ImagePath}/stripe-bg-2.png") repeat;
+      border: none;
+      min-height: 45px;
+    }
+
+    .nav > li {
+      padding: 0;
+      border-right: 1px solid @black;
+    }
+
+    .nav > li > a.menu-home {
+      width: auto;
+    }
+
+    .nav-collapse .nav > li > a {
+      border-bottom: solid 1px #222 !important;
+      &:hover, &:focus, &:active {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .t3-mainnav .t3-megamenu .nav > li > a.menu-home {
+    width: auto !important; 
+    height: auto !important;
+    font-size: 15px;
+    text-indent: 0;
+    text-align: left;
+    i {
+      display: none;
+    }
+  }
+
+
+  // BREADCRUMBS
+  // -------------------------------------------------------
+  .t3-navhelper {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+
+
+  // -------------------------------------------------------
+  //  JA MAIN MENU
+  // -------------------------------------------------------
+
+  .t3-mainnav {
+    background: @navbarBackground;
+    height: auto;
+
+    // Toggle Button
+    //.navbar .btn-navbar {
+      //margin-bottom: (@T3globalMargin / 2);
+    //}
+
+    .navbar .btn-navbar:hover {
+      cursor: pointer;
+    }
+
+
+    // COLLAPSIBLE NAVBAR
+    // ----------------------------------------------------
+
+    // The nav
+    .nav-collapse {
+      background: @navbarBackground;
+      top: 46px;
+      //#gradient > .vertical(@navbarBackground, @navbarBackgroundHighlight);
+    }
+
+    .nav-collapse .nav {
+      margin: 0;
+    }
+
+    .nav-collapse .nav > li {
+    }
+
+    .nav-collapse .nav > li > a {
+      margin-bottom: 0;
+      background: @black;
+      color: @white;
+    }
+
+
+    // Nav and dropdown links in navbar
+    // -------------------------------
+    .nav-collapse .nav > li > a,
+    .nav-collapse .dropdown-menu a {
+      border-bottom: 1px solid @hrBorder;
+      padding: (@T3globalPadding / 2) @T3globalPadding;
+      font-weight: bold;
+      //color: @navbarLinkColor;
+      text-shadow: none;
+      .border-radius(0);
+      &:after {
+        display: none;
+      }
+    }
+
+    .nav-collapse .dropdown-menu li + li a {
+      margin-bottom: 0;
+    }
+
+    // Hover state
+    .nav-collapse .nav > li > a:hover {
+      background-color: @T3primaryColor;
+      background-image: none;
+      .reset-filter();
+    }
+
+
+    // dropdown links
+    // --------------
+    .nav-collapse .dropdown-menu a {
+      border-top: 1px solid darken(@navbarBackground, 5%);
+      border-bottom: 0;
+      font-weight: normal;
+      padding: (@T3globalPadding / 4) 0;
+    }
+
+    // Hover state
+    .nav-collapse .dropdown-menu a:hover {
+      background-color: @dropdownLinkBackgroundHover;
+      background-image: none;
+      .reset-filter();
+    }
+
+
+    // Dropdowns in the navbar
+    // -----------------------
+    .nav-collapse .dropdown-menu {
+      margin: 0;
+      padding: 0;
+      background-color: @navbarBackground;
+      border: none;
+      .border-radius(0);
+      .box-shadow(none);
+    }
+    
+    
+    // Full width when fixed
+    // ---------------------
+    &.navbar-collapse-fixed-top,
+    &.navbar-collapse-fixed-bottom {
+      margin: 0;
+
+      .nav-collapse {
+        margin: 0;
+      }
+    }
+    // End
+  }
+
+
+  // ----------------------------------------------------
+  // MISC
+  // ----------------------------------------------------
+  .t3-mainnav .navbar .nav > li > .dropdown-menu {
+    // Hiding Menu and Divider in nav-collapse
+    &:before, &:after, .divider {
+      display: none;
+    }
+  }
+
+  .t3-mainnav .customization {
+    display: none;
+  }
+
+  .t3-mainnav .secnav {
+    float: right; 
+    width: auto;
+  }
+
+  .navbar .secnav,
+  .secnav {
+
+    .dropdown-menu {
+      margin-top: 8px;
+      max-width: 200px; 
+      z-index: 1000;
+    }
+    li:hover, li:focus, li:active {
+      .dropdown-menu {
+        display: block !important;
+      }
+    }
+    
+  }
+
+  .t3-mainnav {
+    .nav li.dropdown > .dropdown-toggle {
+        background-color: @black;
+    }
+
+    .nav li.dropdown.open > .dropdown-toggle, 
+    .nav li.dropdown.active > .dropdown-toggle, 
+    .nav li.dropdown.open.active > .dropdown-toggle {
+        background-color: @T3primaryColor;
+    }
+
+    .nav > li > a:hover, 
+    .nav > li > a:focus, 
+    .dropdown.open > a.dropdown-toggle {
+      background-color: @T3primaryColor;
+    }
+
+    .nav > li > a.menu-home {
+      font-size: @T3biggerFontSize;
+      text-indent: 0;
+      text-align: left;
+
+      i {
+        display: none;
+      }
+    }
+  }
+  
+  // End Responsive
+}
+
+
+
+// ---------------------------------------------------------
+// RESPONSIVE NAVIFATION FOR MOBILE
+// ---------------------------------------------------------
+@media (max-width: 360px) { 
+  .t3-mainnav .secnav {
+
+    .nav {
+      position: relative;
+
+      li {
+        position: static;
+      }
+
+      li.languageswitcher-block {
+        position: relative;
+      }
+    }
+  }
+}

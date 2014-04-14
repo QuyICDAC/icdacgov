@@ -1,0 +1,96 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+
+// VARIABLES & MIXINS
+// ------------------
+@import "vars.less"; // Include Variables and Mixins
+
+
+// EXTEND STYLE IN BASE
+// --------------------
+@import "../../../plugins/system/t3/base/less/megamenu-responsive.less";
+
+
+
+//
+// MOBILE
+// -------------------------------------------------------------
+@media (max-width: @navbarCollapseWidth) {
+
+  .t3-megamenu {
+    .mega-col-nav {
+      border: none;
+    }
+
+    // THE MEGAMENU
+    //----------------------------------------------------------
+
+    // Global Menu Inner padding
+    // -------------------------
+    .mega-inner {
+      padding: (@T3globalPadding / 2) @T3globalPadding;
+    }
+
+    // Inner Padding for 1 column
+    .span12 .mega-inner {
+    }
+
+
+    // Menu Grids
+    // ----------
+    .row-fluid,
+    .mega-dropdown-menu,
+    .row-fluid [class*="span"] {
+    }
+
+    .row-fluid + .row-fluid  {
+      border-top: 1px solid @grayLight;
+    }
+
+    .row-fluid [class*="span"] {
+    }
+
+
+    // Nav in Megamenu
+    // ---------------
+    // Inner padding for nav in 1 column
+    .span12.mega-col-nav .mega-inner {
+      padding: 0;
+    }
+
+    // The Nav
+    .mega-nav,
+    .dropdown-menu .mega-nav {
+    }
+
+    .mega-nav > li,
+    .dropdown-menu .mega-nav > li {
+    }
+
+    .mega-nav > li a,
+    .dropdown-menu .mega-nav > li a {
+      padding: (@T3globalPadding/4) @T3globalPadding;
+    }
+
+    .nav-child.mega-group-ct .mega-dropdown-inner .mega-col-nav .mega-nav > li a {
+      padding: @T3globalPadding/4;
+    }
+
+    // Modules in Megamenu
+    // -------------------
+
+    // The module
+    .t3-module {
+      margin-bottom: 0;
+    }
+
+    // End
+  }
+
+
+  // End Megamenu Styling
+}
+
+

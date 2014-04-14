@@ -1,0 +1,344 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+
+@import "vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+.home-feature {
+  .ja-zinfp {
+    margin-right: 0;
+    margin-bottom: @T3globalMargin/4;
+  }
+}
+
+.ja-zinfp {
+  background: #f3f3f3;
+  border: 1px solid @T3borderColor;
+  border-top: 5px solid @T3borderColor;
+  border-left: 0;
+  margin-right: 4px;
+}
+
+.ja-zintitle > a {
+  font-family: @serifFontFamily;
+  text-transform: none;
+  font-weight: bold;
+  color: @T3primaryColor;
+
+  &:hover {
+    color: @grayDarker;
+  }
+}
+
+.linear .ja-zin .subcats-selection {
+  margin: 0;
+}
+
+
+// Home Feature Top
+// ------------------------------------
+
+.ja-zinfp-featured-wrap {
+  background: url("@{T3ImagePath}/curl-bg-ltr.png") no-repeat right -1px;
+  margin-top: -13px;
+
+  .ja-zinfp-featured {
+    .ja-zincontent-wrap {
+      background: @white;
+      padding-bottom: @T3globalPadding;
+    }
+
+    h2.ja-zintitle { 
+      font-size: 175%; 
+      line-height: 1.275;
+      background: @black;
+      padding: 8px 12px;
+
+      a {
+        color: @T3borderColor;
+        text-decoration: none;
+      }
+    }
+
+    .ja-zincontent-img {
+      background: @black;
+      margin: 0;
+      padding: 5px 7px 0 5px;
+
+      img { 
+        width: 100%;
+        border: 1px solid #1f1f1f; 
+      }
+    }
+
+    .ja-zincontent p { 
+      line-height: 1.5; 
+      margin: 0 0 8px; 
+      padding: 2px 12px; 
+    }
+  }
+
+  .ja-zinfp-featured-border {
+    background: @white;
+    margin-right: 8px !important;
+    border-left: 1px solid #d5d5d5;
+    border-right: 1px solid #d5d5d5;
+
+    &:hover h2.ja-zintitle,
+    &:hover .ja-zincontent-img { 
+      background: @linkColor; 
+
+      a {
+        color: @white;
+      }
+
+      img {
+        border-color: #90bdd3;
+      }
+    }
+  }
+}
+// End featured
+
+// Normal News
+// ------------------------------------
+
+.ja-zinfp-wrap .ja-zinfp-normal {
+  padding: 8px 0 0 0;
+  
+  h4.ja-zintitle  {
+    font-size: @baseFontSize;
+    line-height: @baseLineHeight - 4px;
+
+    a { 
+      display: block; 
+      padding: 3px 8px;
+
+      &:hover, &:active, &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .ja-zincontent { 
+    border-bottom: 1px solid @T3borderColor; 
+    margin: 1px 8px 1px 0;
+
+    &:hover, &:hover a { 
+      background: @linkColor; color: @white;
+    }
+  }
+
+  .ja-zincontent-img {
+    background: url("@{T3ImagePath}/stripe-bg-2.png") #ddd;
+    border-right: 1px solid @T3borderColor;
+    padding: 6px;
+
+    &.right { 
+      margin-right: 0; 
+      margin-left: 8px; 
+      float: right; 
+    }
+
+    img {
+      border: 3px solid @white !important; 
+      margin: 0 !important; 
+      float: none !important;
+    }
+  }
+
+  .ja-zinintro { 
+    font-size: @T3smallFontSize;
+    padding: 0 8px; 
+
+    p {
+      line-height: @baseLineHeight - 6px;
+      margin: 0 !important;
+    }
+  }
+
+  // End Normal
+}
+
+
+// Read More
+.ja-zincontent {
+
+  p.readmore > a.readon {
+    background: #ddd;
+    color: @grayDarker;
+    text-transform: uppercase;
+    font-size: @T3smallerFontSize;
+    font-weight: bold;
+    display: inline-block;
+    padding: 3px (@T3globalPadding/4);
+    position: relative;
+    line-height: 14px;
+
+    &:hover {
+      text-decoration: none;
+      color: @white;
+      background: @grayDarker;
+
+      &:after {
+        border-left: 10px solid @grayDarker;
+      }
+    }
+
+    &:after {
+      border-bottom: 10px solid transparent;
+      border-left: 10px solid #ddd;
+      border-top: 10px solid transparent;
+      content: "";
+      position: absolute;
+      right: -9px;
+      top: 0;
+    }
+  }
+
+}
+
+// Actions 
+// ------------------------------------
+div.ja-zinfp-links-actions {
+  border-top: 1px solid @T3borderColor;
+  background: #ddd;
+  width: 100%;
+
+  a, a:focus {
+    border-left: 1px solid @T3borderColor !important;
+    border-right: none !important;
+    color: @grayDarker;
+    font: 10px/normal Arial, sans-serif;
+    padding: 4px 12px 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    float: right;
+  }
+
+  a:hover, a:active { 
+    background-color: @black; 
+    color: @white; 
+    text-decoration: none; 
+  }
+
+  .box-counter {
+    border-right: 1px solid @T3borderColor;
+    color: @grayDarker;
+    direction: ltr;
+    font: 10px/normal Arial, sans-serif;
+    padding: 4px 12px 3px;
+    text-transform: uppercase;
+    display: block;
+    float: left;
+
+    .counter {
+      float: none;
+    }
+  }
+}
+
+a.ja-zinfp-links-actions-prev span {
+  background: url("@{T3ImagePath}/back-btn-ltr.png") no-repeat left center;
+  padding-left: 8px;
+  display: inline-block;
+}
+
+a.ja-zinfp-links-actions-next span {
+  background: url("@{T3ImagePath}/next-btn-ltr.png") no-repeat right center;
+  padding-right: 8px;
+  display: inline-block;
+}
+
+.sidebar .jazin-content {
+  span.jazin-content-text {
+    background: url("@{T3ImagePath}/trans-w.png") repeat left top !important;
+  }
+
+  &:hover span.jazin-content-text {
+    background-image: url("@{T3ImagePath}/trans-d.png") !important;
+  }
+}
+// End Actions
+
+
+// Featured news
+// -----------------------------------------
+.sidebar {
+
+  div.jazin-contentwrap { 
+    border-bottom: 1px solid @white;
+
+    .jazin-content { 
+      position: relative; 
+      overflow: hidden;
+
+      a.jazin-content-inner {
+        position: relative;
+        display: block;
+        .clearfix();
+
+        p { 
+          margin-bottom: 0;
+          color: #ccc; 
+          display: none; 
+          padding: 5px;
+        }
+
+        span.jazin-title {
+          color: @grayDarker;
+          display: block;
+          font-size: 100%;
+          font-weight: bold;
+          margin: 0 !important;
+          padding: 5px !important;
+        }
+
+        span.jazin-content-text {
+          background: url("@{T3ImagePath}/trans-w.png") repeat left top;
+          border-top: 1px solid #ddd;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          line-height: 1.15;
+        }
+      }
+
+      .readmore {
+        display: inline-block;
+        margin-bottom: 5px;
+        font-size: @T3smallerFontSize;
+        font-weight: bold;
+      }
+
+      &:hover a.jazin-content-inner {
+        span.jazin-content-text {
+          background-image: url("@{T3ImagePath}/trans-d.png");
+          border-top: 1px solid @black;
+          height: auto;
+        }
+
+        span.jazin-title { 
+          color: @white;
+        }
+
+        p { 
+          display: block; 
+        }
+      }
+    }
+  }
+
+  .jazin-image-wrap { 
+    margin-bottom: 5px;
+
+    img { 
+      padding: 0; 
+    }
+  }
+
+}
